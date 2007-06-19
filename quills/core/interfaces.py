@@ -39,9 +39,9 @@ class IWriteWeblog(Interface):
     """
     """
 
-    def addEntry(weblogentry):
-        """Add an entry from the weblogentry argument (that must implement or be
-        adaptable to IWeblogEntry).  Return the new entry.
+    def addEntry(title, excerpt, text, topics=[], id=None):
+        """Add an entry from the provided arguments.  If id is None, normalize
+        the title to create an id.  Return the new entry.
         """
 
 
@@ -111,6 +111,10 @@ class IEditWeblogEntry(Interface):
         """
         """
 
+    def edit(self, title, excerpt, text, topics):
+        """
+        """
+
 
 class IWeblogEntry(IReadWeblogEntry, IEditWeblogEntry):
     """A weblog entry.
@@ -130,10 +134,6 @@ class ITopic(Interface):
         """Return title.
         """
 
-    def title_or_id():
-        """Return the title, if not empty, else the id.
-        """
-
     def getDescription():
         """Return the description for this topic.
         """
@@ -148,11 +148,6 @@ class ITopic(Interface):
         limit), and use `offset' to determine where in the full sequence the
         returned sequence starts from.
         """
-
-    #def getLastModified():
-    #    """Return a DateTime instance for when a post in this ITopic was
-    #    last modified.
-    #    """
 
     def __len__():
         """Return the number of posts for this ITopic.
@@ -186,11 +181,6 @@ class IWeblogArchive(Interface):
     def __len__():
         """Return the number of IWeblogEntry instances in this archive.
         """
-
-    #def getLastModified():
-    #    """Return the most recent last-modified date for the entries in this
-    #    archive.
-    #    """
 
 
 class IWeblogArchiveContainer(IWeblogArchive):
