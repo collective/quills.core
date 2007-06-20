@@ -39,9 +39,10 @@ class IWriteWeblog(Interface):
     """
     """
 
-    def addEntry(title, excerpt, text, topics=[], id=None):
+    def addEntry(title, excerpt, text, topics=[], id=None, pubdate=None):
         """Add an entry from the provided arguments.  If id is None, normalize
-        the title to create an id.  Return the new entry.
+        the title to create an id.  If pubdate is None, ignore it.
+        Return the new entry.
         """
 
 
@@ -94,6 +95,11 @@ class IReadWeblogEntry(Interface):
         """Return the HTML text body of the post.
         """
 
+    def getPublicationDate():
+        """Return a DateTime instance for when this IWeblogEntry was/will-be
+        published.
+        """
+
 
 class IEditWeblogEntry(Interface):
     """
@@ -115,10 +121,33 @@ class IEditWeblogEntry(Interface):
         """
         """
 
+    def setPublicationDate(datetime):
+        """Set when this IWeblogEntry was/will-be published.
+        """
+
 
 class IWeblogEntry(IReadWeblogEntry, IEditWeblogEntry):
     """A weblog entry.
     """
+
+
+class IWorkflowedWeblogEntry(Interface):
+    """A very simple workflow implementation for weblog entries.
+    """
+
+    def publish(effective_date):
+        """Publish this weblog entry.  Do nothing if it is already published.
+        """
+
+    def retract():
+        """Retract this weblog entry to 'draft' status.  Do nothing if it is
+        already a draft.
+        """
+
+    def isPublished():
+        """Return True if this weblog entry is currently published, False
+        otherwise.
+        """
 
 
 class ITopic(Interface):
