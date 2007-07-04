@@ -131,7 +131,7 @@ class IWeblogEntry(IReadWeblogEntry, IEditWeblogEntry):
     """
 
 
-class IWorkflowedWeblogEntry(Interface):
+class IWorkflowedWeblogEntry(IWeblogEntry):
     """A very simple workflow implementation for weblog entries.
     """
 
