@@ -30,6 +30,10 @@ class IWeblogView(IBaseView):
     """An interface for a helper view.
     """
 
+    def getConfig():
+        """Return an IWeblogViewConfiguration instance for the weblog.
+        """
+
     def getWeblogEntriesDates(entries_dict):
         """Return a sorted list of dates for dict of entries.
         """

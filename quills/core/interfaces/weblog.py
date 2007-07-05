@@ -1,5 +1,7 @@
 # Zope3 imports
 from zope.interface import Interface
+from zope import schema
+from zope.i18nmessageid import MessageFactory
 
 
 class IReadWeblog(Interface):
@@ -72,3 +74,45 @@ class IEditWeblog(Interface):
 class IWeblog(IReadWeblog, IWriteWeblog, IEditWeblog):
     """A weblog.
     """
+
+_ = MessageFactory('quills')
+
+class IWeblogViewConfiguration(Interface):
+    """
+    """
+
+    onlyExcerptInWeblogView = schema.Bool(
+        title=_(u'Only excerpt in weblog view.'),
+        description=_(u'When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed.'),
+        default=False,
+        )
+
+    groupByDates = schema.Bool(
+        title=_(u'Group by dates'),
+        description=_('When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother.'),
+        default=True,
+        )
+
+    entriesPerPage = schema.Int(
+        title=_(u'Entries Per Page'),
+        description=_('Select the number of weblog entries you would like to display on the front page and any other batched pages.'),
+        default=20,
+        )
+
+    showTopicImagesInWeblogView = schema.Bool(
+        title=_(u'Show Topic Images In Weblog View?'),
+        description=_(u'This controls the display of topic images in the weblog view.'),
+        default=True,
+        )
+
+    entriesPerPortlet = schema.Int(
+        title=_(u'Entries Per Portlet'),
+        description=_('Select the number of entries you would like to display in the various Quills portlets.'),
+        default=5,
+        )
+
+    trackbackEnabled = schema.Bool(
+        title=_(u'Enable the receiving of trackback pings?'),
+        description=_(u'This controls whether trackback are enabled in the weblog'),
+        default=False,
+        )
