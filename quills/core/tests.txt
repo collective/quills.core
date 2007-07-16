@@ -1,0 +1,138 @@
+Let's explore and test quills.core.interfaces...
+
+(N.B. These tests are written assuming that the implementation being tested
+provides IWorkflowedWeblogEntry.)
+
+The test-case class should have made self.weblog available to us.  We'll check
+that (and save a few keystrokes in this file) and make sure it implements the
+correct interface.
+
+  >>> weblog = self.weblog
+  >>> from quills.core.interfaces import IWeblog
+  >>> IWeblog.providedBy(weblog)
+  True
+
+There shouldn't be any published entries in this weblog yet.
+
+  >>> weblog.getEntries()
+  []
+
+There aren't any drafts either.
+
+  >>> weblog.getDrafts()
+  []
+
+Now we'll add a weblog entry.
+
+  >>> entry1 = weblog.addEntry(title='The First Title',
+  ...                          excerpt='A little excerpting',
+  ...                          text='foo bar baz',
+  ...                          topics=['aTopic', 'bTopic'])
+
+Of course, the new entry should implement the required interface.
+
+  >>> from quills.core.interfaces import IWorkflowedWeblogEntry
+  >>> IWorkflowedWeblogEntry.providedBy(entry1)
+  True
+
+The weblog now has a draft entry, but no published entries.
+
+  >>> len(weblog.getDrafts())
+  1
+  >>> len(weblog.getEntries())
+  0
+
+We can check its workflow state and manipulate it.
+
+  >>> entry1.isPublished()
+  False
+  >>> entry1.publish()
+
+Publishing the entry should show up in the weblog.
+
+  >>> len(weblog.getDrafts())
+  0
+  >>> len(weblog.getEntries())
+  1
+
+We can retract as well.
+
+  >>> entry1.retract()
+  >>> len(weblog.getDrafts())
+  1
+  >>> len(weblog.getEntries())
+  0
+
+When we created the entry, we gave it a title, an excerpt, some text, and some
+topics.
+
+  >>> entry1.getTitle()
+  'The First Title'
+  >>> entry1.getExcerpt()
+  'A little excerpting'
+  >>> entry1.getText()
+  'foo bar baz'
+  >>> entry1_topics = entry1.getTopics()
+  >>> from quills.core.interfaces import ITopic
+  >>> for topic in entry1_topics:
+  ...   ITopic.providedBy(topic)
+  True
+  True
+
+ITopic makes no requirement as to the order in which topics are returned.
+
+  >>> entry1_topics = [topic.getId() for topic in entry1_topics]
+  >>> entry1_topics.sort()
+  >>> entry1_topics
+  ['aTopic', 'bTopic']
+
+The weblog should also be aware of these topics.
+
+  >>> weblog_topics = weblog.getTopics()
+  >>> for topic in weblog_topics:
+  ...   ITopic.providedBy(topic)
+  True
+  True
+  >>> weblog_topics = [topic.getId() for topic in weblog_topics]
+  >>> weblog_topics.sort()
+  >>> weblog_topics == entry1_topics
+  True
+
+We can get a topic by id from the weblog, and that topic will know about the
+entries associated with it.
+
+  >>> aTopic = weblog.getTopicById('aTopic')
+  >>> aTopic_entries = aTopic.getEntries()
+  >>> len(aTopic_entries)
+  1
+  >>> aTopic_entries[0].getObject() == entry1
+  True
+
+We just get None if we ask for a topic that doesn't exist yet.
+
+  >>> weblog.getTopicById('wowowowow')
+  None
+
+The weblog has an archive feature.
+
+  >>> archives = weblog.getArchives()
+  >>> from quills.core.interfaces import IWeblogArchiveContainer, IWeblogArchive
+  >>> IWeblogArchiveContainer.providedBy(archives)
+  True
+  >>> IWeblogArchive.providedBy(archives)
+  True
+
+As the weblog entry isn't published, it won't show up in the archives.
+
+  >>> archives.getEntries()
+  []
+
+So we'll publish it and then check again.
+
+  >>> entry1.publish()
+  >>> archive_entries = archives.getEntries()
+  >>> len(archive_entries)
+  1
+  >>> archive_entries[0].getObject() == entry1
+  True
+

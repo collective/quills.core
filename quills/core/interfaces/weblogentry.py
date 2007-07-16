@@ -6,6 +6,10 @@ class IReadWeblogEntry(Interface):
     """A weblog entry.
     """
 
+    def getTitle():
+        """Return the title of the entry.
+        """
+
     def getTopics():
         """Return a sequence of ITopic instances for this IWeblogEntry.
         """
@@ -32,6 +36,10 @@ class IReadWeblogEntry(Interface):
 class IEditWeblogEntry(Interface):
     """
     """
+
+    def setTitle(title):
+        """
+        """
 
     def setTopics(topic_ids):
         """
