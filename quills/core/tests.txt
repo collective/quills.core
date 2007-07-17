@@ -46,7 +46,8 @@ We can check its workflow state and manipulate it.
 
   >>> entry1.isPublished()
   False
-  >>> entry1.publish()
+  >>> from datetime import datetime
+  >>> entry1.publish(datetime.now())
 
 Publishing the entry should show up in the weblog.
 
@@ -108,10 +109,13 @@ entries associated with it.
   >>> aTopic_entries[0].getObject() == entry1
   True
 
-We just get None if we ask for a topic that doesn't exist yet.
+We get an empty topic if we ask for one that doesn't really 'exist' yet.
 
-  >>> weblog.getTopicById('wowowowow')
-  None
+  >>> non_existant = weblog.getTopicById('wowowowow')
+  >>> ITopic.providedBy(non_existant)
+  True
+  >>> non_existant.getEntries()
+  []
 
 The weblog has an archive feature.
 
@@ -129,10 +133,9 @@ As the weblog entry isn't published, it won't show up in the archives.
 
 So we'll publish it and then check again.
 
-  >>> entry1.publish()
+  >>> entry1.publish(datetime.now())
   >>> archive_entries = archives.getEntries()
   >>> len(archive_entries)
   1
   >>> archive_entries[0].getObject() == entry1
   True
-
