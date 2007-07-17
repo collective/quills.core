@@ -46,8 +46,7 @@ We can check its workflow state and manipulate it.
 
   >>> entry1.isPublished()
   False
-  >>> from datetime import datetime
-  >>> entry1.publish(datetime.now())
+  >>> entry1.publish()
 
 Publishing the entry should show up in the weblog.
 
@@ -133,7 +132,7 @@ As the weblog entry isn't published, it won't show up in the archives.
 
 So we'll publish it and then check again.
 
-  >>> entry1.publish(datetime.now())
+  >>> entry1.publish()
   >>> archive_entries = archives.getEntries()
   >>> len(archive_entries)
   1

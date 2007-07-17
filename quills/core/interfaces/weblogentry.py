@@ -71,8 +71,9 @@ class IWorkflowedWeblogEntry(IWeblogEntry):
     """A very simple workflow implementation for weblog entries.
     """
 
-    def publish(effective_date):
+    def publish(pubdate=None):
         """Publish this weblog entry.  Do nothing if it is already published.
+        `pubdate' defaults to datetime.now().
         """
 
     def retract():
