@@ -99,14 +99,18 @@ The weblog should also be aware of these topics.
   True
 
 We can get a topic by id from the weblog, and that topic will know about the
-entries associated with it.
+entries associated with it, but only when they are published.
 
   >>> aTopic = weblog.getTopicById('aTopic')
+  >>> aTopic.getEntries()
+  []
+  >>> entry1.publish()
   >>> aTopic_entries = aTopic.getEntries()
   >>> len(aTopic_entries)
   1
   >>> aTopic_entries[0].getObject() == entry1
   True
+  >>> entry1.retract()
 
 We get an empty topic if we ask for one that doesn't really 'exist' yet.
 
