@@ -1,6 +1,7 @@
 # Local imports
 from basecontent import IBaseContent
 
+
 class ITopic(IBaseContent):
     """A keyword, with an optionally associated image, that knows how to find
     content tagged with it.

@@ -12,10 +12,6 @@ class IBaseView(Interface):
         If `obj' is None, then self.context is used.
         """
 
-    def getParentWeblog(obj=None):
-        """Return a Weblog instance above the current object.
-        """
-
     def getArchiveURLFor(weblogentry):
         """Return an archive URL for the object represented by the IWeblogEntry.
         """
