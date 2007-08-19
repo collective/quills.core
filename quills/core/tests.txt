@@ -48,7 +48,7 @@ We can check its workflow state and manipulate it.
   False
   >>> entry1.publish()
 
-Publishing the entry should show up in the weblog.
+Publishing the entry should make it show up in the weblog.
 
   >>> len(weblog.getDrafts())
   0
@@ -108,7 +108,7 @@ entries associated with it, but only when they are published.
   >>> aTopic_entries = aTopic.getEntries()
   >>> len(aTopic_entries)
   1
-  >>> aTopic_entries[0].getObject() == entry1
+  >>> aTopic_entries[0].getTitle() == entry1.getTitle()
   True
   >>> entry1.retract()
 
@@ -119,6 +119,28 @@ We get an empty topic if we ask for one that doesn't really 'exist' yet.
   True
   >>> non_existant.getEntries()
   []
+
+There are also author topics, that act like topics for individual authors.
+
+  >>> auth_topics = weblog.getAuthors()
+
+After we've published our entry, there will only be one author topic.
+
+  >>> len(auth_topics)
+  0
+  >>> entry1.publish()
+  >>> auth_topics = weblog.getAuthors()
+  >>> len(auth_topics)
+  1
+
+We can look-up entries on author topics just like we can with normal topics.
+
+  >>> auth_topic = auth_topics[0]
+  >>> len(auth_topic)
+  1
+  >>> auth_topic.getEntries()[0].getTitle() == entry1.getTitle()
+  True
+  >>> entry1.retract()
 
 The weblog has an archive feature.
 
@@ -140,5 +162,40 @@ So we'll publish it and then check again.
   >>> archive_entries = archives.getEntries()
   >>> len(archive_entries)
   1
-  >>> archive_entries[0].getObject() == entry1
+  >>> archive_entries[0].getTitle() == entry1.getTitle()
+  True
+
+The archive is deeper than just the main archive container.  There are
+sub-archives, too, and they should have access to the weblog entry as well.
+Specifically, there are year archives...
+
+  >>> year_subarchives = archives.getSubArchives()
+  >>> len(year_subarchives)
+  1
+  >>> year_archive = year_subarchives[0]
+  >>> len(year_archive)
+  1
+  >>> year_archive.getEntries()[0].getTitle() == entry1.getTitle()
+  True
+
+... and month archives...
+
+  >>> month_subarchives = year_archive.getSubArchives()
+  >>> len(month_subarchives)
+  1
+  >>> month_archive = month_subarchives[0]
+  >>> len(month_archive)
+  1
+  >>> month_archive.getEntries()[0].getTitle() == entry1.getTitle()
+  True
+
+... and day archives...
+
+  >>> day_subarchives = month_archive.getSubArchives()
+  >>> len(day_subarchives)
+  1
+  >>> day_archive = day_subarchives[0]
+  >>> len(day_archive)
+  1
+  >>> day_archive.getEntries()[0].getTitle() == entry1.getTitle()
   True

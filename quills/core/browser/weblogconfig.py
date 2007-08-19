@@ -2,10 +2,10 @@ from persistent.dict import PersistentDict
 from zope.annotation.interfaces import IAnnotations
 from zope.interface import implements
 from zope.formlib import form
-from quills.core.interfaces import IWeblogViewConfiguration
+from quills.core.interfaces import IWeblogConfiguration
 from Products.statusmessages.interfaces import IStatusMessage
 
-ANNO_KEY = 'quills.core.weblogviewconfiguration'
+ANNO_KEY = 'quills.core.weblogconfiguration'
 
 # XXX These default values should be taken directly from the
 # IWeblogViewConfiguration schema.
@@ -16,14 +16,15 @@ DEFAULT_VIEW_CONFIG = {
     'showTopicImagesInWeblogView' : True,
     'entriesPerPortlet'           : 5,
     'trackbackEnabled'            : False,
+    'archiveFormat'               : '',
     }
 
 
-class WeblogViewConfigurationAnnotations(object):
+class WeblogConfigAnnotations(object):
     """
     """
 
-    implements(IWeblogViewConfiguration)
+    implements(IWeblogConfiguration)
 
     def __init__(self, context):
         self.context = context
@@ -71,18 +72,23 @@ class WeblogViewConfigurationAnnotations(object):
         self._config['trackbackEnabled'] = value
     trackbackEnabled = property(_get_trackbackEnabled, _set_trackbackEnabled)
 
+    def _get_archiveFormat(self):
+        return self._config['archiveFormat']
+    def _set_archiveFormat(self, value):
+        self._config['archiveFormat'] = value
+    archiveFormat = property(_get_archiveFormat, _set_archiveFormat)
 
 
-class WeblogViewConfigEditForm(form.EditForm):
+class WeblogConfigEditForm(form.EditForm):
     """Edit form for weblog view configuration.
     """
 
-    form_fields = form.Fields(IWeblogViewConfiguration)
+    form_fields = form.Fields(IWeblogConfiguration)
     label = u'Weblog View Configuration'
 
     def setUpWidgets(self, ignore_request=False):
         self.adapters = {}
-        wvconfig = IWeblogViewConfiguration(self.context)
+        wvconfig = IWeblogConfiguration(self.context)
         self.widgets = form.setUpEditWidgets(
             self.form_fields, self.prefix, wvconfig, self.request,
             adapters=self.adapters, ignore_request=ignore_request
@@ -92,7 +98,7 @@ class WeblogViewConfigEditForm(form.EditForm):
     def submit(self, action, data):
         """
         """
-        wvconfig = IWeblogViewConfiguration(self.context)
+        wvconfig = IWeblogConfiguration(self.context)
         form.applyChanges(wvconfig, self.form_fields, data)
         msg = 'Configuration saved.'
         IStatusMessage(self.request).addStatusMessage(msg, type='info')

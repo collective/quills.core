@@ -8,10 +8,10 @@ class IReadWeblog(Interface):
     """
     """
 
-    def getEntries(max=None, offset=0):
+    def getEntries(maximum=None, offset=0):
         """Return a sequence of published IWeblogEntry instances, sorted by
-        publishing date.  Only return a maximum of `max' (where None means no
-        limit), and use `offset' to determine where in the full sequence the
+        publishing date.  Only return a maximum of `maximum' (where None means
+        no limit), and use `offset' to determine where in the full sequence the
         returned sequence starts from.
         """
 
@@ -52,18 +52,18 @@ class IEditWeblog(Interface):
     """
     """
 
-    def getDrafts(max=None, offset=None):
+    def getDrafts(maximum=None, offset=0):
         """Return a sequence of unpublished IWeblogEntry instances, sorted by
-        creation date.  Only return a maximum of `max' (where None means no
+        creation date.  Only return a maximum of `maximum' (where None means no
         limit), and use `offset' to determine where in the full sequence the
         returned sequence starts from.
         """
 
-    def getAllEntries(max=None, offset=None):
+    def getAllEntries(maximum=None, offset=0):
         """Return a sequence all IWeblogEntry instances (published or not),
-        sorted by publishing date.  Only return a maximum of `max' (where None
-        means no limit), and use `offset' to offset where in the full sequence
-        the returned sequence starts from.
+        sorted by publishing date.  Only return a maximum of `maximum' (where
+        None means no limit), and use `offset' to offset where in the full
+        sequence the returned sequence starts from.
         """
 
     def deleteEntry(entry_id):
@@ -77,7 +77,7 @@ class IWeblog(IReadWeblog, IWriteWeblog, IEditWeblog):
 
 _ = MessageFactory('quills')
 
-class IWeblogViewConfiguration(Interface):
+class IWeblogConfiguration(Interface):
     """
     """
 
@@ -115,4 +115,12 @@ class IWeblogViewConfiguration(Interface):
         title=_(u'Enable the receiving of trackback pings?'),
         description=_(u'This controls whether trackback are enabled in the weblog'),
         default=False,
+        )
+
+    archiveFormat = schema.TextLine(
+        title=_(u'Archive format'),
+        description=_(u"""Allows for (optionally) injecting a segment into archive URLs after the weblog segment.
+        e.g. To have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."""),
+        default=u'',
+        required=False,
         )

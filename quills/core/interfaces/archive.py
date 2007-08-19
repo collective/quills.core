@@ -1,7 +1,10 @@
 # Zope3 imports
 from zope.interface import Interface
 
-class IWeblogArchive(Interface):
+# Local imports
+from basecontent import IBaseContent
+
+class IWeblogArchive(IBaseContent):
     """An archive folder for a weblog.
     """
 

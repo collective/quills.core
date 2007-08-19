@@ -1,8 +1,11 @@
 # Zope3 imports
 from zope.interface import Interface
 
+# Local imports
+from basecontent import IBaseContent
 
-class IReadWeblogEntry(Interface):
+
+class IReadWeblogEntry(IBaseContent):
     """A weblog entry.
     """
 

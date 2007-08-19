@@ -50,6 +50,16 @@ class IWeblogEntryView(IBaseView):
     """
     """
 
+    def getWeblogEntryContent():
+        """Return the content object that can be adapted to IWeblogEntry for the
+        entry being viewed.
+        """
+
+    def getWeblogEntry():
+        """Return an object that provides IWeblogEntry for the entry being
+        viewed.
+        """
+
 
 class ITopicView(IWeblogView):
     """
