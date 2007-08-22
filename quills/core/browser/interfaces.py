@@ -26,6 +26,15 @@ class IWeblogView(IBaseView):
     """An interface for a helper view.
     """
 
+    def getWeblog():
+        """Return an object that provides IWeblog for the object being viewed.
+        """
+
+    def getWeblogContent():
+        """Return the content object that can be adapted to IWeblog for the
+        object being viewed.
+        """
+
     def getConfig():
         """Return an IWeblogViewConfiguration instance for the weblog.
         """
