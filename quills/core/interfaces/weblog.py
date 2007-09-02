@@ -81,43 +81,37 @@ class IWeblogConfiguration(Interface):
     """
     """
 
-    onlyExcerptInWeblogView = schema.Bool(
+    only_excerpt_in_weblog_view = schema.Bool(
         title=_(u'Only excerpt in weblog view.'),
         description=_(u'When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed.'),
         default=False,
         )
 
-    groupByDates = schema.Bool(
+    group_by_dates = schema.Bool(
         title=_(u'Group by dates'),
         description=_('When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother.'),
         default=True,
         )
 
-    entriesPerPage = schema.Int(
+    entries_per_page = schema.Int(
         title=_(u'Entries Per Page'),
-        description=_('Select the number of weblog entries you would like to display on the front page and any other batched pages.'),
+        description=_(u'Select the number of weblog entries you would like to display on the front page and any other batched pages.'),
         default=20,
         )
 
-    showTopicImagesInWeblogView = schema.Bool(
+    topic_images_in_weblog_view = schema.Bool(
         title=_(u'Show Topic Images In Weblog View?'),
         description=_(u'This controls the display of topic images in the weblog view.'),
         default=True,
         )
 
-    entriesPerPortlet = schema.Int(
-        title=_(u'Entries Per Portlet'),
-        description=_('Select the number of entries you would like to display in the various Quills portlets.'),
-        default=5,
-        )
-
-    trackbackEnabled = schema.Bool(
+    trackback_enabled = schema.Bool(
         title=_(u'Enable the receiving of trackback pings?'),
         description=_(u'This controls whether trackback are enabled in the weblog'),
         default=False,
         )
 
-    archiveFormat = schema.TextLine(
+    archive_format = schema.TextLine(
         title=_(u'Archive format'),
         description=_(u"""Allows for (optionally) injecting a segment into archive URLs after the weblog segment.
         e.g. To have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."""),

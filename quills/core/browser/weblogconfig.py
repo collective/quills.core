@@ -1,22 +1,27 @@
+# Zope imports
 from persistent.dict import PersistentDict
 from zope.annotation.interfaces import IAnnotations
 from zope.interface import implements
 from zope.formlib import form
-from quills.core.interfaces import IWeblogConfiguration
+
+# Plone imports
 from Products.statusmessages.interfaces import IStatusMessage
+
+# Quills imports
+from quills.core.interfaces import IWeblogConfiguration
+
 
 ANNO_KEY = 'quills.core.weblogconfiguration'
 
 # XXX These default values should be taken directly from the
 # IWeblogViewConfiguration schema.
 DEFAULT_VIEW_CONFIG = {
-    'onlyExcerptInWeblogView'     : False,
-    'groupByDates'                : True,
-    'entriesPerPage'              : 20,
-    'showTopicImagesInWeblogView' : True,
-    'entriesPerPortlet'           : 5,
-    'trackbackEnabled'            : False,
-    'archiveFormat'               : '',
+    'only_excerpt_in_weblog_view'   : False,
+    'group_by_dates'                : True,
+    'entries_per_page'              : 20,
+    'topic_images_in_weblog_view'   : True,
+    'trackback_enabled'             : False,
+    'archive_format'                : '',
     }
 
 
@@ -29,54 +34,51 @@ class WeblogConfigAnnotations(object):
     def __init__(self, context):
         self.context = context
         annotations = IAnnotations(self.context)
-        self._config = annotations.get(ANNO_KEY, None)
-        if self._config is None:
-            self._config = PersistentDict(DEFAULT_VIEW_CONFIG.copy())
-            annotations[ANNO_KEY] = self._config
+        self._config = annotations.setdefault(ANNO_KEY, PersistentDict())
 
     def _get_onlyExcerptInWeblogView(self):
-        return self._config['onlyExcerptInWeblogView']
+        default = DEFAULT_VIEW_CONFIG['only_excerpt_in_weblog_view']
+        return self._config.setdefault('only_excerpt_in_weblog_view', default)
     def _set_onlyExcerptInWeblogView(self, value):
-        self._config['onlyExcerptInWeblogView'] = value
-    onlyExcerptInWeblogView = property(_get_onlyExcerptInWeblogView,
-                                       _set_onlyExcerptInWeblogView)
+        self._config['only_excerpt_in_weblog_view'] = value
+    only_excerpt_in_weblog_view = property(_get_onlyExcerptInWeblogView,
+                                           _set_onlyExcerptInWeblogView)
 
     def _get_groupByDates(self):
-        return self._config['groupByDates']
+        default = DEFAULT_VIEW_CONFIG['group_by_dates']
+        return self._config.setdefault('group_by_dates', default)
     def _set_groupByDates(self, value):
-        self._config['groupByDates'] = value
-    groupByDates = property(_get_groupByDates, _set_groupByDates)
+        self._config['group_by_dates'] = value
+    group_by_dates = property(_get_groupByDates, _set_groupByDates)
 
     def _get_entriesPerPage(self):
-        return self._config['entriesPerPage']
+        default = DEFAULT_VIEW_CONFIG['entries_per_page']
+        return self._config.setdefault('entries_per_page', default)
     def _set_entriesPerPage(self, value):
-        self._config['entriesPerPage'] = value
-    entriesPerPage = property(_get_entriesPerPage, _set_entriesPerPage)
+        self._config['entries_per_page'] = value
+    entries_per_page = property(_get_entriesPerPage, _set_entriesPerPage)
 
     def _get_showTopicImagesInWeblogView(self):
-        return self._config['showTopicImagesInWeblogView']
+        default = DEFAULT_VIEW_CONFIG['topic_images_in_weblog_view']
+        return self._config.setdefault('topic_images_in_weblog_view', default)
     def _set_showTopicImagesInWeblogView(self, value):
-        self._config['showTopicImagesInWeblogView'] = value
-    showTopicImagesInWeblogView = property(_get_showTopicImagesInWeblogView,
+        self._config['topic_images_in_weblog_view'] = value
+    topic_images_in_weblog_view = property(_get_showTopicImagesInWeblogView,
                                            _set_showTopicImagesInWeblogView)
 
-    def _get_entriesPerPortlet(self):
-        return self._config['entriesPerPortlet']
-    def _set_entriesPerPortlet(self, value):
-        self._config['entriesPerPortlet'] = value
-    entriesPerPortlet = property(_get_entriesPerPortlet, _set_entriesPerPortlet)
-
     def _get_trackbackEnabled(self):
-        return self._config['trackbackEnabled']
+        default = DEFAULT_VIEW_CONFIG['trackback_enabled']
+        return self._config.setdefault('trackback_enabled', default)
     def _set_trackbackEnabled(self, value):
-        self._config['trackbackEnabled'] = value
-    trackbackEnabled = property(_get_trackbackEnabled, _set_trackbackEnabled)
+        self._config['trackback_enabled'] = value
+    trackback_enabled = property(_get_trackbackEnabled, _set_trackbackEnabled)
 
     def _get_archiveFormat(self):
-        return self._config['archiveFormat']
+        default = DEFAULT_VIEW_CONFIG['archive_format']
+        return self._config.setdefault('archive_format', default)
     def _set_archiveFormat(self, value):
-        self._config['archiveFormat'] = value
-    archiveFormat = property(_get_archiveFormat, _set_archiveFormat)
+        self._config['archive_format'] = value
+    archive_format = property(_get_archiveFormat, _set_archiveFormat)
 
 
 class WeblogConfigEditForm(form.EditForm):

@@ -28,7 +28,7 @@ class IWeblogEnhancedConfiguration(IWeblogConfiguration):
     """
     """
 
-    defaultType = schema.TextLine(
+    default_type = schema.TextLine(
         title=_(u'Default type.'),
         description=_(u'The default portal_type to add for this weblog.'),
         default=u'Document',
