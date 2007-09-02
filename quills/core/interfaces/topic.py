@@ -11,6 +11,10 @@ class ITopic(IBaseContent):
         """Return the keyword/id for this topic.
         """
 
+    def getKeywords(self):
+        """Return a sequence of keywords that this topic represents.
+        """
+
     def getTitle():
         """Return title.
         """

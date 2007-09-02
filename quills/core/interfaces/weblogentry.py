@@ -35,6 +35,11 @@ class IReadWeblogEntry(IBaseContent):
         published.
         """
 
+    def getWeblogEntryContentObject():
+        """Return the content object that can be adapted to IWeblogEntry, and
+        which this IWeblogEntry represents.
+        """
+
 
 class IEditWeblogEntry(Interface):
     """

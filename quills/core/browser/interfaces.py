@@ -21,6 +21,11 @@ class IBaseView(Interface):
         IWeblogEntry.
         """
 
+    def displayingOneEntry(context, weblogentry):
+        """Return True if the absolute_url of context equals that for
+        weblogentry; False otherwise.
+        """
+
 
 class IWeblogView(IBaseView):
     """An interface for a helper view.
@@ -71,27 +76,10 @@ class ITopicView(IWeblogView):
     """
 
     def getLastModified():
-        """
-        """
-
-
-class ITagCloudView(Interface):
-    """
-    """
-
-    def getCloud(weblog=None):
-        """For `weblog', or the nearest weblog, return a list of tuples containing the:
-            - topic object
-            - relative weight of the topic, 0.0 to 1.0
-            - number of entries for that topic, since we already calculated it.
-        Skip topics that have no entries.
+        """Return the datetime for when the most recently modified IWeblogEntry
+        in this topic was modified.
         """
 
-    def getClouds():
-        """Return a list of dictionaries like:
-            [ {'blog' : blog1, 'cloud' : cloud1},
-              {'blog' : blog2, 'cloud' : cloud2},
-              ...
-             ]
-        Where `cloud1' is the return value from self.getCloud(blog1), etc.
+    def absolute_url():
+        """Return the absolute URL for this topic.
         """
