@@ -27,6 +27,9 @@ DEFAULT_VIEW_CONFIG = {
 
 class WeblogConfigAnnotations(object):
     """
+    >>> from zope.interface.verify import verifyClass
+    >>> verifyClass(IWeblogConfiguration, WeblogConfigAnnotations)
+    True
     """
 
     implements(IWeblogConfiguration)
