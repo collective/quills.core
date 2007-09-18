@@ -61,7 +61,7 @@ class IEditWeblogEntry(Interface):
         """
         """
 
-    def edit(self, title, excerpt, text, topics):
+    def edit(title, excerpt, text, topics):
         """
         """
 
