@@ -51,16 +51,6 @@ class IWeblogEntryView(IBaseView):
     """
     """
 
-    def getWeblogEntryContent():
-        """Return the content object that can be adapted to IWeblogEntry for the
-        entry being viewed.
-        """
-
-    def getWeblogEntry():
-        """Return an object that provides IWeblogEntry for the entry being
-        viewed.
-        """
-
 
 class ITopicView(IWeblogView):
     """
@@ -69,8 +59,4 @@ class ITopicView(IWeblogView):
     def getLastModified():
         """Return the datetime for when the most recently modified IWeblogEntry
         in this topic was modified.
-        """
-
-    def absolute_url():
-        """Return the absolute URL for this topic.
         """
