@@ -3,8 +3,11 @@ from zope.interface import Interface
 from zope import schema
 from zope.i18nmessageid import MessageFactory
 
+# Quills import
+from basecontent import IBaseContent
 
-class IReadWeblog(Interface):
+
+class IReadWeblog(IBaseContent):
     """
     """
 
