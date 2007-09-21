@@ -46,3 +46,30 @@ class ITopic(IBaseContent):
 class IAuthorTopic(ITopic):
     """Represents a topic that queries based on authors (aka 'Creators').
     """
+
+
+class ITopicContainer(IBaseContent):
+    """Represents a container for ITopic objects.
+    """
+
+    def getTopics():
+        """Return a sequence of ITopic instances for this blog.
+        """
+
+    def getTopicById(id):
+        """Return an ITopic instance corresponding to `id'.
+        """
+
+
+class IAuthorContainer(IBaseContent):
+    """Represents a container for IAuthor objects.
+    """
+
+    def getAuthors():
+        """Return a sequence of IAuthorTopic instances, one for every portal
+        member id that has posted to this IWeblog.
+        """
+
+    def getAuthorById(id):
+        """Return an IAuthorTopic instance for id.
+        """

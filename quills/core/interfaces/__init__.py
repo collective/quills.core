@@ -12,6 +12,8 @@ from archive import IWeblogArchive
 from archive import IWeblogArchiveContainer
 from topic import IAuthorTopic
 from topic import ITopic
+from topic import ITopicContainer
+from topic import IAuthorContainer
 from enabled import IPossibleWeblog
 from enabled import IPossibleWeblogEntry
 from enabled import IWeblogEnhancedConfiguration
@@ -21,4 +23,4 @@ from enabled import IWeblogEnhanced
 IBaseContent, IReadWeblog, IWeblog, IEditWeblog, IWriteWeblog, IWeblogConfiguration
 IReadWeblogEntry, IEditWeblogEntry, IWeblogEntry, IWorkflowedWeblogEntry, IWeblogArchive
 IWeblogArchiveContainer, IAuthorTopic, ITopic, IPossibleWeblog, IPossibleWeblogEntry
-IWeblogEnhancedConfiguration, IWeblogEnhanced, 
+IWeblogEnhancedConfiguration, IWeblogEnhanced, ITopicContainer, IAuthorContainer

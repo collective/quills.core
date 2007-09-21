@@ -5,9 +5,11 @@ from zope.i18nmessageid import MessageFactory
 
 # Quills import
 from basecontent import IBaseContent
+from topic import ITopicContainer
+from topic import IAuthorContainer
 
 
-class IReadWeblog(IBaseContent):
+class IReadWeblog(ITopicContainer, IAuthorContainer, IBaseContent):
     """
     """
 
@@ -20,23 +22,6 @@ class IReadWeblog(IBaseContent):
 
     def getArchives():
         """Return an IWeblogArchiveContainer instance for this blog.
-        """
-
-    def getTopics():
-        """Return a sequence of ITopic instances for this blog.
-        """
-
-    def getTopicById(id):
-        """Return an ITopic instance corresponding to `id'.
-        """
-
-    def getAuthors():
-        """Return a sequence of IAuthorTopic instances, one for every portal
-        member id that has posted to this IWeblog.
-        """
-
-    def getAuthorById(id):
-        """Return an IAuthorTopic instance for id.
         """
 
 

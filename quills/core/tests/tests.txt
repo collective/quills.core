@@ -142,6 +142,15 @@ We can look-up entries on author topics just like we can with normal topics.
   True
   >>> entry1.retract()
 
+IWeblogEntry objects can also tell us about their authors.
+
+  >>> authors = entry1.getAuthors()
+  >>> len(authors)
+  1
+  >>> from quills.core.interfaces import IAuthorTopic
+  >>> IAuthorTopic.providedBy(authors[0])
+  True
+
 The weblog has an archive feature.
 
   >>> archives = weblog.getArchives()

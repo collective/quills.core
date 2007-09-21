@@ -39,7 +39,7 @@ class IReadWeblogEntry(IBaseContent):
         """Return the content object that can be adapted to IWeblogEntry, and
         which this IWeblogEntry represents.
         """
-    
+
     def getMimeType():
         """return the mimetype of the entry (i.e. text/plain, text/html etc.)"""
         pass
