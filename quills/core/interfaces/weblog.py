@@ -44,9 +44,10 @@ class IWriteWeblog(Interface):
     """
     """
 
-    def addEntry(title, excerpt, text, topics=[], id=None, pubdate=None):
+    def addEntry(title, excerpt, text, topics=[], id=None, pubdate=None, mimetype=None):
         """Add an entry from the provided arguments.  If id is None, normalize
         the title to create an id.  If pubdate is None, ignore it.
+        If mimetype is None, use the default.
         Return the new entry.
         """
 

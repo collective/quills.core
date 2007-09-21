@@ -39,6 +39,10 @@ class IReadWeblogEntry(IBaseContent):
         """Return the content object that can be adapted to IWeblogEntry, and
         which this IWeblogEntry represents.
         """
+    
+    def getMimeType():
+        """return the mimetype of the entry (i.e. text/plain, text/html etc.)"""
+        pass
 
 
 class IEditWeblogEntry(Interface):
@@ -57,12 +61,14 @@ class IEditWeblogEntry(Interface):
         """
         """
 
-    def setText(text):
+    def setText(text, mimetype=None):
         """
+        If mimetype is None, use the default.
         """
 
-    def edit(title, excerpt, text, topics):
+    def edit(title, excerpt, text, topics, mimetype=None):
         """
+        If mimetype is None, use the default.
         """
 
     def setPublicationDate(datetime):
