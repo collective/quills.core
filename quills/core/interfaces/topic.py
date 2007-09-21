@@ -27,9 +27,9 @@ class ITopic(IBaseContent):
         """Return an image object for this topic.
         """
 
-    def getEntries(max=None, offset=0):
+    def getEntries(maximum=None, offset=0):
         """Return a sequence of published IWeblogEntry instances, sorted by
-        publishing date.  Only return a maximum of `max' (where None means no
+        publishing date.  Only return a maximum of `maximum' (where None means no
         limit), and use `offset' to determine where in the full sequence the
         returned sequence starts from.
         """
