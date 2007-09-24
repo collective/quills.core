@@ -55,6 +55,14 @@ Publishing the entry should make it show up in the weblog.
   >>> len(weblog.getEntries())
   1
 
+It's ok to publish something that's already published - it'll have no effect.
+
+  >>> entry1.isPublished()
+  True
+  >>> entry1.publish()
+  >>> entry1.isPublished()
+  True
+
 We can retract as well.
 
   >>> entry1.retract()
@@ -62,6 +70,14 @@ We can retract as well.
   1
   >>> len(weblog.getEntries())
   0
+
+It's ok to retract something twice as well.
+
+  >>> entry1.isPublished()
+  False
+  >>> entry1.retract()
+  >>> entry1.isPublished()
+  False
 
 When we created the entry, we gave it a title, an excerpt, some text, and some
 topics.
