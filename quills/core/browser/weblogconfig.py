@@ -21,7 +21,7 @@ DEFAULT_VIEW_CONFIG = {
     'entries_per_page'              : 20,
     'topic_images_in_weblog_view'   : True,
     'trackback_enabled'             : False,
-    'archive_format'                : 'archive',
+    'archive_format'                : '',
     }
 
 
