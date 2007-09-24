@@ -7,9 +7,13 @@ from zope.i18nmessageid import MessageFactory
 from basecontent import IBaseContent
 from topic import ITopicContainer
 from topic import IAuthorContainer
+from archive import IWeblogArchive
 
 
-class IReadWeblog(ITopicContainer, IAuthorContainer, IBaseContent):
+class IReadWeblog(IWeblogArchive,
+                  ITopicContainer,
+                  IAuthorContainer,
+                  IBaseContent):
     """
     """
 
@@ -18,10 +22,6 @@ class IReadWeblog(ITopicContainer, IAuthorContainer, IBaseContent):
         publishing date.  Only return a maximum of `maximum' (where None means
         no limit), and use `offset' to determine where in the full sequence the
         returned sequence starts from.
-        """
-
-    def getArchives():
-        """Return an IWeblogArchiveContainer instance for this blog.
         """
 
 

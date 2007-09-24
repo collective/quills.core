@@ -153,52 +153,40 @@ IWeblogEntry objects can also tell us about their authors.
 
 The weblog has an archive feature.
 
-  >>> archives = weblog.getArchives()
-  >>> from quills.core.interfaces import IWeblogArchiveContainer, IWeblogArchive
-  >>> IWeblogArchiveContainer.providedBy(archives)
-  True
-  >>> IWeblogArchive.providedBy(archives)
-  True
+  >>> archives = weblog.getSubArchives()
 
 As the weblog entry isn't published, it won't show up in the archives.
 
-  >>> archives.getEntries()
-  []
+  >>> len(archives)
+  0
 
 So we'll publish it and then check again.
 
   >>> entry1.publish()
-  >>> archive_entries = archives.getEntries()
+  >>> archives = weblog.getSubArchives()
+  >>> len(archives)
+  1
+  >>> year_archive = archives[0]
+  >>> from quills.core.interfaces import IWeblogArchive
+  >>> IWeblogArchive.providedBy(year_archive)
+  True
+  >>> archive_entries = year_archive.getEntries()
   >>> len(archive_entries)
   1
   >>> archive_entries[0].getTitle() == entry1.getTitle()
   True
 
-The archive is deeper than just the main archive container.  There are
-sub-archives, too, and they should have access to the weblog entry as well.
-Specifically, there are year archives...
+The archive is deeper than just the year archive.  There are also 'month' and
+'day' archives, too, and they should have access to the weblog entry as well.
 
-  >>> year_subarchives = archives.getSubArchives()
-  >>> len(year_subarchives)
+  >>> month_archives = year_archive.getSubArchives()
+  >>> len(month_archives)
   1
-  >>> year_archive = year_subarchives[0]
-  >>> len(year_archive)
-  1
-  >>> year_archive.getEntries()[0].getTitle() == entry1.getTitle()
-  True
-
-... and month archives...
-
-  >>> month_subarchives = year_archive.getSubArchives()
-  >>> len(month_subarchives)
-  1
-  >>> month_archive = month_subarchives[0]
+  >>> month_archive = month_archives[0]
   >>> len(month_archive)
   1
   >>> month_archive.getEntries()[0].getTitle() == entry1.getTitle()
   True
-
-... and day archives...
 
   >>> day_subarchives = month_archive.getSubArchives()
   >>> len(day_subarchives)

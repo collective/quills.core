@@ -22,5 +22,6 @@ class IWeblogArchive(IBaseContent):
 
 
 class IWeblogArchiveContainer(IWeblogArchive):
-    """Marker interface for the root archive container for an IWeblog.
+    """An interface for the root archive container for an IWeblog when there is
+    an extra 'archive' URL segment in use: e.g. '.../weblog/archive/2007/07'
     """
