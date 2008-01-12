@@ -107,3 +107,10 @@ class IWeblogConfiguration(Interface):
         default=u'',
         required=False,
         )
+
+class IWeblogLocator(Interface):
+    """Find a weblog."""
+    
+    def find():
+        """some IWeblog implementing object or empty list is returned"""
+        

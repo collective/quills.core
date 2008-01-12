@@ -4,6 +4,7 @@ from weblog import IWeblog
 from weblog import IEditWeblog
 from weblog import IWriteWeblog
 from weblog import IWeblogConfiguration
+from weblog import IWeblogLocator
 from weblogentry import IReadWeblogEntry
 from weblogentry import IEditWeblogEntry
 from weblogentry import IWeblogEntry
