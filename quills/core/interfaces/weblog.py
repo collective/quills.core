@@ -107,10 +107,16 @@ class IWeblogConfiguration(Interface):
         default=u'',
         required=False,
         )
+    
+    show_about = schema.Bool(
+        title=_(u"Show 'About' info"),
+        description=_(u"If selected, the item creator and modification date will be shown."),
+        default=True,
+        )
+
 
 class IWeblogLocator(Interface):
     """Find a weblog."""
     
     def find():
         """some IWeblog implementing object or empty list is returned"""
-        

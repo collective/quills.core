@@ -22,6 +22,7 @@ DEFAULT_VIEW_CONFIG = {
     'topic_images_in_weblog_view'   : True,
     'trackback_enabled'             : False,
     'archive_format'                : '',
+    'show_about'                    : True,
     }
 
 
@@ -82,6 +83,13 @@ class WeblogConfigAnnotations(object):
     def _set_archiveFormat(self, value):
         self._config['archive_format'] = value
     archive_format = property(_get_archiveFormat, _set_archiveFormat)
+    
+    def _get_showAbout(self):
+        default = DEFAULT_VIEW_CONFIG['show_about']
+        return self._config.setdefault('show_about', default)
+    def _set_showAbout(self, value):
+        self._config['show_about'] = value
+    show_about = property(_get_showAbout, _set_showAbout)
 
 
 class WeblogConfigEditForm(form.EditForm):
