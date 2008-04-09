@@ -20,17 +20,3 @@ class IWeblogEnhanced(Interface):
 class IPossibleWeblogEntry(Interface):
     """A marker interface for representing what *could* be a weblog entry.
     """
-
-
-_ = MessageFactory('quills')
-
-class IWeblogEnhancedConfiguration(IWeblogConfiguration):
-    """
-    """
-
-    default_type = schema.TextLine(
-        title=_(u'Default type.'),
-        description=_(u'The default portal_type to add for this weblog.'),
-        default=u'Document',
-        required=False,
-        )

@@ -17,11 +17,11 @@ from topic import ITopicContainer
 from topic import IAuthorContainer
 from enabled import IPossibleWeblog
 from enabled import IPossibleWeblogEntry
-from enabled import IWeblogEnhancedConfiguration
 from enabled import IWeblogEnhanced
 
 # PYFLAKES
-IBaseContent, IReadWeblog, IWeblog, IEditWeblog, IWriteWeblog, IWeblogConfiguration
-IReadWeblogEntry, IEditWeblogEntry, IWeblogEntry, IWorkflowedWeblogEntry, IWeblogArchive
-IWeblogArchiveContainer, IAuthorTopic, ITopic, IPossibleWeblog, IPossibleWeblogEntry
-IWeblogEnhancedConfiguration, IWeblogEnhanced, ITopicContainer, IAuthorContainer
+IBaseContent, IReadWeblog, IWeblog, IEditWeblog, IWriteWeblog
+IWeblogConfiguration, IReadWeblogEntry, IEditWeblogEntry, IWeblogEntry
+IWorkflowedWeblogEntry, IWeblogArchive, IWeblogArchiveContainer, IAuthorTopic
+ITopic, IPossibleWeblog, IPossibleWeblogEntry, IWeblogEnhanced, ITopicContainer
+IAuthorContainer

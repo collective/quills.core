@@ -17,6 +17,16 @@ class IReadWeblog(IWeblogArchive,
     """
     """
 
+    def hasEntry(id):
+        """Return True if this IReadWeblog holds an entry with an id of `id',
+        and False otherwise.
+        """
+
+    def getEntry(id):
+        """Return the IWeblogEntry associated with `id', or None if there is no
+        such entry.
+        """
+
     def getEntries(maximum=None, offset=0):
         """Return a sequence of published IWeblogEntry instances, sorted by
         publishing date.  Only return a maximum of `maximum' (where None means
@@ -34,6 +44,14 @@ class IWriteWeblog(Interface):
         the title to create an id.  If pubdate is None, ignore it.
         If mimetype is None, use the default.
         Return the new entry.
+        """
+
+    def addFile(content, mimetype, id=None, title=''):
+        """Add a file-ish object corresponding to `mimetype' that stores
+        `content'.  If `id' is provided, use it for the file; otherwise generate
+        a new (unique) id.  If `id' is not provided, try normalizing a provided
+        `title' argument (if available) to create the id.
+        Return the added object.
         """
 
 
@@ -63,6 +81,12 @@ class IEditWeblog(Interface):
 class IWeblog(IReadWeblog, IWriteWeblog, IEditWeblog):
     """A weblog.
     """
+
+    def getWeblogContentObject():
+        """Return the content object that can be adapted to IWeblog, and which
+        this IWeblog represents.
+        """
+
 
 _ = MessageFactory('quills')
 
@@ -117,6 +141,7 @@ class IWeblogConfiguration(Interface):
 
 class IWeblogLocator(Interface):
     """Find a weblog."""
-    
+
     def find():
-        """some IWeblog implementing object or empty list is returned"""
+        """Some IWeblog implementing object or empty list is returned.
+        """

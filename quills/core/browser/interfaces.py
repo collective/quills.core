@@ -1,8 +1,10 @@
 # Zope3 imports
 from zope.interface import Interface
 
+from quills.core.interfaces.basecontent import IBaseContent
 
-class IBaseView(Interface):
+
+class IBaseView(IBaseContent):
     """Base Quills view.
     """
 
@@ -64,6 +66,10 @@ class IWeblogView(IBaseView):
 class IWeblogEntryView(IBaseView):
     """
     """
+
+    def getWeblogEntry():
+        """
+        """
 
 
 class ITopicView(IWeblogView):
