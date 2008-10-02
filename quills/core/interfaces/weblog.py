@@ -1,7 +1,7 @@
 # Zope3 imports
 from zope.interface import Interface
 from zope import schema
-from zope.i18nmessageid import MessageFactory
+
 
 # Quills import
 from basecontent import IBaseContent
@@ -9,6 +9,7 @@ from topic import ITopicContainer
 from topic import IAuthorContainer
 from archive import IWeblogArchive
 
+from quills.core import QuillsCoreMessageFactory as _
 
 class IReadWeblog(IWeblogArchive,
                   ITopicContainer,
@@ -88,39 +89,37 @@ class IWeblog(IReadWeblog, IWriteWeblog, IEditWeblog):
         """
 
 
-_ = MessageFactory('quills')
-
 class IWeblogConfiguration(Interface):
     """
     """
 
     only_excerpt_in_weblog_view = schema.Bool(
-        title=_(u'Only excerpt in weblog view.'),
-        description=_(u'When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed.'),
+        title=_(u'label_only_excerpt_in_weblog_view', default=u'Only excerpt in weblog view.'),
+        description=_(u'help_only_excerpt_in_weblog_view', default=u'When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed.'),
         default=False,
         )
 
     group_by_dates = schema.Bool(
-        title=_(u'Group by dates'),
-        description=_('When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother.'),
+        title=_(u'label_group_by_dates', default=u'Group by dates'),
+        description=_(u'help_group_by_dates', default=u'When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother.'),
         default=True,
         )
 
     entries_per_page = schema.Int(
-        title=_(u'Entries Per Page'),
-        description=_(u'Select the number of weblog entries you would like to display on the front page and any other batched pages.'),
+        title=_(u'label_entries_per_page', default=u'Entries Per Page'),
+        description=_(u'help_entries_per_page', default=u'Select the number of weblog entries you would like to display on the front page and any other batched pages.'),
         default=20,
         )
 
     topic_images_in_weblog_view = schema.Bool(
-        title=_(u'Show Topic Images In Weblog View?'),
-        description=_(u'This controls the display of topic images in the weblog view.'),
+        title=_(u'label_show_topic_images_in_weblog_view', default=u'Show Topic Images In Weblog View?'),
+        description=_(u'help_show_topic_images_in_weblog_view', default=u'This controls the display of topic images in the weblog view.'),
         default=True,
         )
 
     trackback_enabled = schema.Bool(
-        title=_(u'Enable the receiving of trackback pings?'),
-        description=_(u'This controls whether trackback are enabled in the weblog'),
+        title=_(u'label_trackback_enabled', default=u'Enable the receiving of trackback pings?'),
+        description=_(u'help_trackback_enabled', default=u'This controls whether trackback are enabled in the weblog'),
         default=False,
         )
 

@@ -1,0 +1,85 @@
+# Gettext Message File for Quills.
+# This one should include the workflow names, content type names and
+# other strangely not i18n-taggable stuff. Empty for now.
+msgid ""
+msgstr ""
+"Project-Id-Version: Quills 1.5\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: 2008-10-02 11:50+0100\n"
+"Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=iso-8859-1\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: eu\n"
+"Language-Name: Basque\n"
+"Preferred-Encodings: latin1 utf-8\n"
+"Domain: quills.core\n"
+
+#: ./interfaces/weblog.py:127
+msgid "Archive format"
+msgstr ""
+
+#: ./browser/weblogconfig.py:117
+msgid "Configuration saved."
+msgstr "Konfigurazioa gordeta"
+
+#: ./interfaces/weblog.py:136
+msgid "If selected, the item creator and modification date will be shown."
+msgstr ""
+
+#: ./interfaces/weblog.py:135
+msgid "Show 'About' info"
+msgstr ""
+
+#. Default: "Select the number of weblog entries you would like to display on the front page and any other batched pages."
+#: ./interfaces/weblog.py:110
+msgid "help_entries_per_page"
+msgstr "Aukeratu zenbanaka agertuko diren blogeko mezuak portada nagusian edo zatikatutako beste orrialde guztietan"
+
+#. Default: "When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother."
+#: ./interfaces/weblog.py:104
+msgid "help_group_by_dates"
+msgstr "Aktibatutakoan, mezuak data baten azpian taldekatuta azalduko dira. Bestela bata bestearen ostean azalduko dira."
+
+#. Default: "When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed."
+#: ./interfaces/weblog.py:98
+msgid "help_only_excerpt_in_weblog_view"
+msgstr "Aukeratuta dagoenean, blogaren bista nagusian izenburua eta sarrera testua bakarrik agertuko dira. Mezuren batekin sarrerarik ez badu izenburua bakarrik erakutsiko da."
+
+#. Default: "This controls the display of topic images in the weblog view."
+#: ./interfaces/weblog.py:116
+msgid "help_show_topic_images_in_weblog_view"
+msgstr "Gaiei dagozkien irudiak agertuko diren ala ez kontrolatzen du honek."
+
+#. Default: "This controls whether trackback are enabled in the weblog"
+#: ./interfaces/weblog.py:122
+msgid "help_trackback_enabled"
+msgstr "Trackbackak gaituta dauden ala ez kontrolatzen da hemendik"
+
+#. Default: "Entries Per Page"
+#: ./interfaces/weblog.py:109
+msgid "label_entries_per_page"
+msgstr "Orri baten ikusiko den mezu kopurua"
+
+#. Default: "Group by dates"
+#: ./interfaces/weblog.py:103
+msgid "label_group_by_dates"
+msgstr "Mezuak dataren arabera taldekatu?"
+
+#. Default: "Only excerpt in weblog view."
+#: ./interfaces/weblog.py:97
+msgid "label_only_excerpt_in_weblog_view"
+msgstr "Sarrera testuak bakarrik erakutsi?"
+
+#. Default: "Show Topic Images In Weblog View?"
+#: ./interfaces/weblog.py:115
+msgid "label_show_topic_images_in_weblog_view"
+msgstr "Blogaren bistan gaiei dagozkien irudiak erakutsi?"
+
+#. Default: "Enable the receiving of trackback pings?"
+#: ./interfaces/weblog.py:121
+msgid "label_trackback_enabled"
+msgstr "Trackbackak aktibatu"
+

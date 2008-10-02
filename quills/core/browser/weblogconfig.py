@@ -8,6 +8,7 @@ from zope.formlib import form
 from Products.statusmessages.interfaces import IStatusMessage
 
 # Quills imports
+from quills.core import QuillsCoreMessageFactory as _
 from quills.core.interfaces import IWeblogConfiguration
 
 
@@ -113,5 +114,5 @@ class WeblogConfigEditForm(form.EditForm):
         """
         wvconfig = IWeblogConfiguration(self.context)
         form.applyChanges(wvconfig, self.form_fields, data)
-        msg = 'Configuration saved.'
+        msg = _(u'Configuration saved.')
         IStatusMessage(self.request).addStatusMessage(msg, type='info')
