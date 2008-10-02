@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Quills 1.5\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: 2008-10-02 11:50+0100\n"
+"PO-Revision-Date: 2008-10-02 17:21+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: ./interfaces/weblog.py:127
 msgid "Archive format"
-msgstr ""
+msgstr "Artxiboaren formatua"
 
 #: ./browser/weblogconfig.py:117
 msgid "Configuration saved."
@@ -27,11 +27,11 @@ msgstr "Konfigurazioa gordeta"
 
 #: ./interfaces/weblog.py:136
 msgid "If selected, the item creator and modification date will be shown."
-msgstr ""
+msgstr "Aukeratuz gero, elementuaren sortzailea eta aldatze data erakutsiko dira"
 
 #: ./interfaces/weblog.py:135
 msgid "Show 'About' info"
-msgstr ""
+msgstr "Honi buruzko informazioa erakutsi"
 
 #. Default: "Select the number of weblog entries you would like to display on the front page and any other batched pages."
 #: ./interfaces/weblog.py:110
