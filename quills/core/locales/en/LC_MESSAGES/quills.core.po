@@ -1,0 +1,87 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2008-10-02 08:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#: ./interfaces/weblog.py:128
+msgid "Allows for (optionally) injecting a segment into archive URLs after the weblog segment.
+        e.g. To have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."
+msgstr ""
+
+#: ./interfaces/weblog.py:127
+msgid "Archive format"
+msgstr ""
+
+#: ./browser/weblogconfig.py:117
+msgid "Configuration saved."
+msgstr ""
+
+#: ./interfaces/weblog.py:136
+msgid "If selected, the item creator and modification date will be shown."
+msgstr ""
+
+#: ./interfaces/weblog.py:135
+msgid "Show 'About' info"
+msgstr ""
+
+#. Default: "Select the number of weblog entries you would like to display on the front page and any other batched pages."
+#: ./interfaces/weblog.py:110
+msgid "help_entries_per_page"
+msgstr ""
+
+#. Default: "When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother."
+#: ./interfaces/weblog.py:104
+msgid "help_group_by_dates"
+msgstr ""
+
+#. Default: "When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed."
+#: ./interfaces/weblog.py:98
+msgid "help_only_excerpt_in_weblog_view"
+msgstr ""
+
+#. Default: "This controls the display of topic images in the weblog view."
+#: ./interfaces/weblog.py:116
+msgid "help_show_topic_images_in_weblog_view"
+msgstr ""
+
+#. Default: "This controls whether trackback are enabled in the weblog"
+#: ./interfaces/weblog.py:122
+msgid "help_trackback_enabled"
+msgstr ""
+
+#. Default: "Entries Per Page"
+#: ./interfaces/weblog.py:109
+msgid "label_entries_per_page"
+msgstr ""
+
+#. Default: "Group by dates"
+#: ./interfaces/weblog.py:103
+msgid "label_group_by_dates"
+msgstr ""
+
+#. Default: "Only excerpt in weblog view."
+#: ./interfaces/weblog.py:97
+msgid "label_only_excerpt_in_weblog_view"
+msgstr ""
+
+#. Default: "Show Topic Images In Weblog View?"
+#: ./interfaces/weblog.py:115
+msgid "label_show_topic_images_in_weblog_view"
+msgstr ""
+
+#. Default: "Enable the receiving of trackback pings?"
+#: ./interfaces/weblog.py:121
+msgid "label_trackback_enabled"
+msgstr ""
+
