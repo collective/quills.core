@@ -19,15 +19,15 @@ msgstr ""
 
 #: ./browser/weblogconfig.py:117
 msgid "Configuration saved."
-msgstr "ConfiguraciÃ³n guardada."
+msgstr "Configuración guardada."
 
 #: ./interfaces/weblog.py:135
 msgid "If selected, the item creator and modification date will be shown."
-msgstr "Si estÃ¡ seleccionado, se mostrarÃ¡n el autor y la fecha de modificaciÃ³n."
+msgstr "Si está seleccionado, se mostrarán el autor y la fecha de modificación."
 
 #: ./interfaces/weblog.py:134
 msgid "Show 'About' info"
-msgstr "Mostrar informaciÃ³n de 'Acerca de'"
+msgstr "Mostrar información de 'Acerca de'"
 
 #. Default: "Allows for (optionally) injecting a segment into archive URLs after the weblog segment. E.g. to have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."
 #: ./interfaces/weblog.py:128
@@ -37,27 +37,27 @@ msgstr ""
 #. Default: "Select the number of weblog entries you would like to display on the front page and any other batched pages."
 #: ./interfaces/weblog.py:110
 msgid "help_entries_per_page"
-msgstr "Elija el nÃºmero de mensajes que se mostrarÃ¡n en la pÃ¡gina principal del blog."
+msgstr "Elija el número de mensajes que se mostrarán en la página principal del blog."
 
 #. Default: "When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother."
 #: ./interfaces/weblog.py:104
 msgid "help_group_by_dates"
-msgstr "Si estÃ¡ seleccionado, los mensajes se agruparÃ¡n bajo un encabezamiento con la fecha. De otra forma, los mensajes se mostrarÃ¡n uno detrÃ¡s de otro."
+msgstr "Si está seleccionado, los mensajes se agruparán bajo un encabezamiento con la fecha. De otra forma, los mensajes se mostrarán uno detrás de otro."
 
 #. Default: "When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed."
 #: ./interfaces/weblog.py:98
 msgid "help_only_excerpt_in_weblog_view"
-msgstr "Si estÃ¡ seleccionado, en la pÃ¡gina principal sÃ³lo se mostrarÃ¡n el tÃ­tulo y la introducciÃ³n del mensaje. Si el mensaje no tiene introducciÃ³n, sÃ³lo se mostrarÃ¡ el tÃ­tulo."
+msgstr "Si está seleccionado, en la página principal sólo se mostrarán el título y la introducción del mensaje. Si el mensaje no tiene introducción, sólo se mostrará el título."
 
 #. Default: "This controls the display of topic images in the weblog view."
 #: ./interfaces/weblog.py:116
 msgid "help_show_topic_images_in_weblog_view"
-msgstr "Esto controla que se muestren las imÃ¡genes de las etiquetas en la vista del blog."
+msgstr "Esto controla que se muestren las imágenes de las etiquetas en la vista del blog."
 
 #. Default: "This controls whether trackback are enabled in the weblog"
 #: ./interfaces/weblog.py:122
 msgid "help_trackback_enabled"
-msgstr "Esto controla si los trackbacks estÃ¡n activados en el blog."
+msgstr "Esto controla si los trackbacks están activados en el blog."
 
 #. Default: "Archive URL prefix"
 #: ./interfaces/weblog.py:127
@@ -67,7 +67,7 @@ msgstr ""
 #. Default: "Entries Per Page"
 #: ./interfaces/weblog.py:109
 msgid "label_entries_per_page"
-msgstr "Entradas por pÃ¡gina"
+msgstr "Entradas por página"
 
 #. Default: "Group by dates"
 #: ./interfaces/weblog.py:103
@@ -77,15 +77,15 @@ msgstr "Agrupar por fechas"
 #. Default: "Only excerpt in weblog view."
 #: ./interfaces/weblog.py:97
 msgid "label_only_excerpt_in_weblog_view"
-msgstr "SÃ³lo la introducciÃ³n en la vista del blog"
+msgstr "Sólo la introducción en la vista del blog"
 
 #. Default: "Show Topic Images In Weblog View?"
 #: ./interfaces/weblog.py:115
 msgid "label_show_topic_images_in_weblog_view"
-msgstr "Â¿Mostrar imÃ¡genes de las etiquetas en la vista del blog?"
+msgstr "¿Mostrar imágenes de las etiquetas en la vista del blog?"
 
 #. Default: "Enable the receiving of trackback pings?"
 #: ./interfaces/weblog.py:121
 msgid "label_trackback_enabled"
-msgstr "Â¿Activar recibir trackbacks?"
+msgstr "¿Activar recibir trackbacks?"
 

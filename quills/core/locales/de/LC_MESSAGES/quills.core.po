@@ -24,31 +24,31 @@ msgstr "Konfiguration gespeichert"
 
 #: ./interfaces/weblog.py:135
 msgid "If selected, the item creator and modification date will be shown."
-msgstr "Quills zeigt den urspÃ¼nglichen Autor sowie das Datum der letzten Ãnderung fÃ¼r jeden Blog-Eintrag an."
+msgstr "Quills zeigt den urspünglichen Autor sowie das Datum der letzten Änderung für jeden Blog-Eintrag an."
 
 #: ./interfaces/weblog.py:134
 msgid "Show 'About' info"
-msgstr "ZusÃ¤tzliche Meta-Daten anzeigen"
+msgstr "Zusätzliche Meta-Daten anzeigen"
 
 #. Default: "Allows for (optionally) injecting a segment into archive URLs after the weblog segment. E.g. to have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."
 #: ./interfaces/weblog.py:128
 msgid "help_archive_url_prefix"
-msgstr "Quills fÃ¼gt diese Zeichenkette in Archiv-URL's ein. Wenn Sie hier bspw. 'archive' eintragen, ezeugt Quills Archiv-Adressen der Form '[weblog-url]/archive/2007/07/21/entry_id'."
+msgstr "Quills fügt diese Zeichenkette in Archiv-URL's ein. Wenn Sie hier bspw. 'archive' eintragen, ezeugt Quills Archiv-Adressen der Form '[weblog-url]/archive/2007/07/21/entry_id'."
 
 #. Default: "Select the number of weblog entries you would like to display on the front page and any other batched pages."
 #: ./interfaces/weblog.py:110
 msgid "help_entries_per_page"
-msgstr "Legt die Anzahl der sichtbaren Weblog-EintrÃ¤ge in der Blog-Ansicht und in anderen Listen fest."
+msgstr "Legt die Anzahl der sichtbaren Weblog-Einträge in der Blog-Ansicht und in anderen Listen fest."
 
 #. Default: "When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother."
 #: ./interfaces/weblog.py:104
 msgid "help_group_by_dates"
-msgstr "Quills gruppiert in der Blog-Ansicht alle Weblog-EintrÃ¤ge eines Tages unter dem selben Datum."
+msgstr "Quills gruppiert in der Blog-Ansicht alle Weblog-Einträge eines Tages unter dem selben Datum."
 
 #. Default: "When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed."
 #: ./interfaces/weblog.py:98
 msgid "help_only_excerpt_in_weblog_view"
-msgstr "Quills unterdrÃ¼ckt den eigentlichen Text des Blog-Eintrags in der Blog-Ansicht und zeigt nur den Titel und die Zusammenfassung an, bzw. nur den Titel, wenn die Zusammenfassung fehlt."
+msgstr "Quills unterdrückt den eigentlichen Text des Blog-Eintrags in der Blog-Ansicht und zeigt nur den Titel und die Zusammenfassung an, bzw. nur den Titel, wenn die Zusammenfassung fehlt."
 
 #. Default: "This controls the display of topic images in the weblog view."
 #: ./interfaces/weblog.py:116
@@ -58,17 +58,17 @@ msgstr "Quills ersetzt in der Blog-Ansicht die Rubrikennamen durch grafische Sym
 #. Default: "This controls whether trackback are enabled in the weblog"
 #: ./interfaces/weblog.py:122
 msgid "help_trackback_enabled"
-msgstr "Dieser Weblog empfÃ¤ngt Benachrichtigungen von Seiten, die auf seine Inhalte verweisen (Trackback Pings)."
+msgstr "Dieser Weblog empfängt Benachrichtigungen von Seiten, die auf seine Inhalte verweisen (Trackback Pings)."
 
 #. Default: "Archive URL prefix"
 #: ./interfaces/weblog.py:127
 msgid "label_archive_url_prefix"
-msgstr "URL-PrÃ¤fix fÃ¼r Archiv-EintrÃ¤ge"
+msgstr "URL-Präfix für Archiv-Einträge"
 
 #. Default: "Entries Per Page"
 #: ./interfaces/weblog.py:109
 msgid "label_entries_per_page"
-msgstr "EintrÃ¤ge pro Seite"
+msgstr "Einträge pro Seite"
 
 #. Default: "Group by dates"
 #: ./interfaces/weblog.py:103
@@ -78,7 +78,7 @@ msgstr "Nach Datum gruppieren"
 #. Default: "Only excerpt in weblog view."
 #: ./interfaces/weblog.py:97
 msgid "label_only_excerpt_in_weblog_view"
-msgstr "Nur AuszÃ¼ge in Ãbersichten anzeigen?"
+msgstr "Nur Auszüge in Übersichten anzeigen?"
 
 #. Default: "Show Topic Images In Weblog View?"
 #: ./interfaces/weblog.py:115

@@ -14,7 +14,7 @@
 # distributed one with the other.
 # 
 # If you have any questions regarding this translation, you can write to
-# the first translator, Filip MiletiÄ (f dot miletic at ewi dot tudelft
+# the first translator, Filip Miletić (f dot miletic at ewi dot tudelft
 # dot nl).
 msgid ""
 msgstr ""

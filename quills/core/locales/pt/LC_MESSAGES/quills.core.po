@@ -36,22 +36,22 @@ msgstr ""
 #. Default: "Select the number of weblog entries you would like to display on the front page and any other batched pages."
 #: ./interfaces/weblog.py:110
 msgid "help_entries_per_page"
-msgstr "Seleccione o nÃºmero de entradas que pretende visualizar em simultÃ¢neo."
+msgstr "Seleccione o número de entradas que pretende visualizar em simultâneo."
 
 #. Default: "When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother."
 #: ./interfaces/weblog.py:104
 msgid "help_group_by_dates"
-msgstr "Quando seleccionado, as entradas serÃ£o agrupadas com um cabeÃ§alho com a respectiva data."
+msgstr "Quando seleccionado, as entradas serão agrupadas com um cabeçalho com a respectiva data."
 
 #. Default: "When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed."
 #: ./interfaces/weblog.py:98
 msgid "help_only_excerpt_in_weblog_view"
-msgstr "Quando seleccionado, apenas o tÃ­tulo e excerto serÃ£o visualizados na pÃ¡gina principal do blog. No caso de nÃ£o existir excerto, simplesmente se visualizarÃ¡ o tÃ­tulo."
+msgstr "Quando seleccionado, apenas o título e excerto serão visualizados na página principal do blog. No caso de não existir excerto, simplesmente se visualizará o título."
 
 #. Default: "This controls the display of topic images in the weblog view."
 #: ./interfaces/weblog.py:116
 msgid "help_show_topic_images_in_weblog_view"
-msgstr "Controlo da visualizaÃ§Ã£o de imagens dos tÃ³picos no blog."
+msgstr "Controlo da visualização de imagens dos tópicos no blog."
 
 #. Default: "This controls whether trackback are enabled in the weblog"
 #: ./interfaces/weblog.py:122
@@ -67,28 +67,28 @@ msgstr ""
 #. Default: "Entries Per Page"
 #: ./interfaces/weblog.py:109
 msgid "label_entries_per_page"
-msgstr "Entradas por PÃ¡gina"
+msgstr "Entradas por Página"
 
 #. Default: "Group by dates"
 #: ./interfaces/weblog.py:103
 #, fuzzy
 msgid "label_group_by_dates"
-msgstr "Agrupar entradas por data na pÃ¡gina principal do blog?"
+msgstr "Agrupar entradas por data na página principal do blog?"
 
 #. Default: "Only excerpt in weblog view."
 #: ./interfaces/weblog.py:97
 #, fuzzy
 msgid "label_only_excerpt_in_weblog_view"
-msgstr "Visualizar apenas o tÃ­tulo e excerto das entradas no pÃ¡gina principal do blog?"
+msgstr "Visualizar apenas o título e excerto das entradas no página principal do blog?"
 
 #. Default: "Show Topic Images In Weblog View?"
 #: ./interfaces/weblog.py:115
 msgid "label_show_topic_images_in_weblog_view"
-msgstr "Visualizar imagens dos tÃ³picos na pÃ¡gina principal do blog?"
+msgstr "Visualizar imagens dos tópicos na página principal do blog?"
 
 #. Default: "Enable the receiving of trackback pings?"
 #: ./interfaces/weblog.py:121
 #, fuzzy
 msgid "label_trackback_enabled"
-msgstr "Activar a recepÃ§Ã£o de trackback pings"
+msgstr "Activar a recepção de trackback pings"
 
