@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quills 1.5\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"POT-Creation-Date: 2008-11-18 13:10+0000\n"
 "PO-Revision-Date: 2006-08-16 10:25-0000\n"
 "Last-Translator: Emyr Thomas <emyr.thomas@gmail.com>\n"
 "Language-Team: Plone i18n <plone-i18n@lists.sourceforge.net>\n"
@@ -15,20 +15,21 @@ msgstr ""
 "Preferred-Encodings: utf-8\n"
 "Domain: quills.core\n"
 
-#: ./interfaces/weblog.py:127
-msgid "Archive format"
-msgstr ""
-
 #: ./browser/weblogconfig.py:117
 msgid "Configuration saved."
 msgstr ""
 
-#: ./interfaces/weblog.py:136
+#: ./interfaces/weblog.py:135
 msgid "If selected, the item creator and modification date will be shown."
 msgstr ""
 
-#: ./interfaces/weblog.py:135
+#: ./interfaces/weblog.py:134
 msgid "Show 'About' info"
+msgstr ""
+
+#. Default: "Allows for (optionally) injecting a segment into archive URLs after the weblog segment. E.g. to have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."
+#: ./interfaces/weblog.py:128
+msgid "help_archive_url_prefix"
 msgstr ""
 
 #. Default: "Select the number of weblog entries you would like to display on the front page and any other batched pages."
@@ -54,6 +55,11 @@ msgstr ""
 #. Default: "This controls whether trackback are enabled in the weblog"
 #: ./interfaces/weblog.py:122
 msgid "help_trackback_enabled"
+msgstr ""
+
+#. Default: "Archive URL prefix"
+#: ./interfaces/weblog.py:127
+msgid "label_archive_url_prefix"
 msgstr ""
 
 #. Default: "Entries Per Page"

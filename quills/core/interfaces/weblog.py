@@ -124,9 +124,8 @@ class IWeblogConfiguration(Interface):
         )
 
     archive_format = schema.TextLine(
-        title=_(u'Archive format'),
-        description=_(u"""Allows for (optionally) injecting a segment into archive URLs after the weblog segment.
-        e.g. To have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."""),
+        title=_(u'label_archive_url_prefix', default=u'Archive URL prefix'),
+        description=_(u'help_archive_url_prefix', default="Allows for (optionally) injecting a segment into archive URLs after the weblog segment. E.g. to have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."),
         default=u'',
         required=False,
         )

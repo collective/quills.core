@@ -1,88 +1,92 @@
+# translation of quills.core.po to Deutsch
+# Jan Hackel <plonecode@hackel.name>, 2008.
 # --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-# SOME DESCRIPTIVE TITLE.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"PO-Revision-Date: 2006-06-29 18:01+0200\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Project-Id-Version: quills.core\n"
+"POT-Creation-Date: 2008-11-18 13:10+0000\n"
+"PO-Revision-Date: 2008-11-18 14:26+0100\n"
+"Last-Translator: Jan Hackel <plonecode@hackel.name>\n"
+"Language-Team: Deutsch <en@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
 "Language-Code: de\n"
 "Language-Name: German\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: quills.core\n"
-
-#: ./interfaces/weblog.py:127
-msgid "Archive format"
-msgstr ""
+"X-Generator: KBabel 1.11.4\n"
 
 #: ./browser/weblogconfig.py:117
 msgid "Configuration saved."
-msgstr ""
-
-#: ./interfaces/weblog.py:136
-msgid "If selected, the item creator and modification date will be shown."
-msgstr ""
+msgstr "Konfiguration gespeichert"
 
 #: ./interfaces/weblog.py:135
+msgid "If selected, the item creator and modification date will be shown."
+msgstr "Quills zeigt den urspÃ¼nglichen Autor sowie das Datum der letzten Ãnderung fÃ¼r jeden Blog-Eintrag an."
+
+#: ./interfaces/weblog.py:134
 msgid "Show 'About' info"
-msgstr ""
+msgstr "ZusÃ¤tzliche Meta-Daten anzeigen"
+
+#. Default: "Allows for (optionally) injecting a segment into archive URLs after the weblog segment. E.g. to have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."
+#: ./interfaces/weblog.py:128
+msgid "help_archive_url_prefix"
+msgstr "Quills fÃ¼gt diese Zeichenkette in Archiv-URL's ein. Wenn Sie hier bspw. 'archive' eintragen, ezeugt Quills Archiv-Adressen der Form '[weblog-url]/archive/2007/07/21/entry_id'."
 
 #. Default: "Select the number of weblog entries you would like to display on the front page and any other batched pages."
 #: ./interfaces/weblog.py:110
 msgid "help_entries_per_page"
-msgstr "Wähle die Anzahl der Web-Log Einträge, die auf der Startseite und in anderen blätterbaren Listen angezeigt werden soll."
+msgstr "Legt die Anzahl der sichtbaren Weblog-EintrÃ¤ge in der Blog-Ansicht und in anderen Listen fest."
 
 #. Default: "When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother."
 #: ./interfaces/weblog.py:104
 msgid "help_group_by_dates"
-msgstr "Anwählen, wenn die Titelzeilen unter einen Datum gruppiert werden sollen. Sonst werden die Einträge einer nach dem anderen angezeigt"
+msgstr "Quills gruppiert in der Blog-Ansicht alle Weblog-EintrÃ¤ge eines Tages unter dem selben Datum."
 
 #. Default: "When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed."
 #: ./interfaces/weblog.py:98
 msgid "help_only_excerpt_in_weblog_view"
-msgstr ""
+msgstr "Quills unterdrÃ¼ckt den eigentlichen Text des Blog-Eintrags in der Blog-Ansicht und zeigt nur den Titel und die Zusammenfassung an, bzw. nur den Titel, wenn die Zusammenfassung fehlt."
 
 #. Default: "This controls the display of topic images in the weblog view."
 #: ./interfaces/weblog.py:116
 msgid "help_show_topic_images_in_weblog_view"
-msgstr ""
+msgstr "Quills ersetzt in der Blog-Ansicht die Rubrikennamen durch grafische Symbole, falls diese konfiguriert wurden."
 
 #. Default: "This controls whether trackback are enabled in the weblog"
 #: ./interfaces/weblog.py:122
 msgid "help_trackback_enabled"
-msgstr ""
+msgstr "Dieser Weblog empfÃ¤ngt Benachrichtigungen von Seiten, die auf seine Inhalte verweisen (Trackback Pings)."
+
+#. Default: "Archive URL prefix"
+#: ./interfaces/weblog.py:127
+msgid "label_archive_url_prefix"
+msgstr "URL-PrÃ¤fix fÃ¼r Archiv-EintrÃ¤ge"
 
 #. Default: "Entries Per Page"
 #: ./interfaces/weblog.py:109
 msgid "label_entries_per_page"
-msgstr "Einträge pro Seite"
+msgstr "EintrÃ¤ge pro Seite"
 
 #. Default: "Group by dates"
 #: ./interfaces/weblog.py:103
-#, fuzzy
 msgid "label_group_by_dates"
-msgstr "Einträge in der Übersicht nach Datum gruppieren?"
+msgstr "Nach Datum gruppieren"
 
 #. Default: "Only excerpt in weblog view."
 #: ./interfaces/weblog.py:97
-#, fuzzy
 msgid "label_only_excerpt_in_weblog_view"
-msgstr "Nur Auszüge in Übersichten anzeigen?"
+msgstr "Nur AuszÃ¼ge in Ãbersichten anzeigen?"
 
 #. Default: "Show Topic Images In Weblog View?"
 #: ./interfaces/weblog.py:115
 msgid "label_show_topic_images_in_weblog_view"
-msgstr "Rubriken-Bilder in der Web-Log Ansicht anzeigen?"
+msgstr "Rubriken-Symble anzeigen"
 
 #. Default: "Enable the receiving of trackback pings?"
 #: ./interfaces/weblog.py:121
-#, fuzzy
 msgid "label_trackback_enabled"
-msgstr "Zulassen von Trackback-Pings?"
+msgstr "Trackback-Pings empfangen"
 

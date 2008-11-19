@@ -4,65 +4,71 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quills 1.5\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"POT-Creation-Date: 2008-11-18 13:10+0000\n"
 "PO-Revision-Date: 2006-09-26 17:32-0300\n"
-"Last-Translator: �rico Andrei <erico@simplesconsultoria.com.br>\n"
+"Last-Translator: Érico Andrei <erico@simplesconsultoria.com.br>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "Language-Code: pt-br\n"
-"Language-Name: Português do Brasil\n"
+"Language-Name: PortuguÃªs do Brasil\n"
 "Preferred-Encodings: latin1 utf-8\n"
 "Domain: quills.core\n"
-
-#: ./interfaces/weblog.py:127
-msgid "Archive format"
-msgstr ""
 
 #: ./browser/weblogconfig.py:117
 msgid "Configuration saved."
 msgstr ""
 
-#: ./interfaces/weblog.py:136
+#: ./interfaces/weblog.py:135
 msgid "If selected, the item creator and modification date will be shown."
 msgstr ""
 
-#: ./interfaces/weblog.py:135
+#: ./interfaces/weblog.py:134
 msgid "Show 'About' info"
+msgstr ""
+
+#. Default: "Allows for (optionally) injecting a segment into archive URLs after the weblog segment. E.g. to have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."
+#: ./interfaces/weblog.py:128
+msgid "help_archive_url_prefix"
 msgstr ""
 
 #. Default: "Select the number of weblog entries you would like to display on the front page and any other batched pages."
 #: ./interfaces/weblog.py:110
 msgid "help_entries_per_page"
-msgstr "Selecione o número de entradas que você deseja exibir na página principal, e em outras páginas de listagem, deste blog."
+msgstr "Selecione o nÃºmero de entradas que vocÃª deseja exibir na pÃ¡gina principal, e em outras pÃ¡ginas de listagem, deste blog."
 
 #. Default: "When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother."
 #: ./interfaces/weblog.py:104
 msgid "help_group_by_dates"
-msgstr "Quando habilitado, as entradas será agrupadas abaixo de um título exibindo a data. Caso contrário, as entradas serão exibidas como uma listagem."
+msgstr "Quando habilitado, as entradas serÃ¡ agrupadas abaixo de um tÃ­tulo exibindo a data. Caso contrÃ¡rio, as entradas serÃ£o exibidas como uma listagem."
 
 #. Default: "When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed."
 #: ./interfaces/weblog.py:98
 msgid "help_only_excerpt_in_weblog_view"
-msgstr "Quando selecionado as entradas exibirão seus títulos e breve descrição nas páginas de listagem do blog. Se uma entrada não possuir um descritivo será exibido apenas o seu título."
+msgstr "Quando selecionado as entradas exibirÃ£o seus tÃ­tulos e breve descriÃ§Ã£o nas pÃ¡ginas de listagem do blog. Se uma entrada nÃ£o possuir um descritivo serÃ¡ exibido apenas o seu tÃ­tulo."
 
 #. Default: "This controls the display of topic images in the weblog view."
 #: ./interfaces/weblog.py:116
 msgid "help_show_topic_images_in_weblog_view"
-msgstr "Esta opção contra a exibição das imagens dos tópicos nas  visões relativas a este blog."
+msgstr "Esta opÃ§Ã£o contra a exibiÃ§Ã£o das imagens dos tÃ³picos nas  visÃµes relativas a este blog."
 
 #. Default: "This controls whether trackback are enabled in the weblog"
 #: ./interfaces/weblog.py:122
 #, fuzzy
 msgid "help_trackback_enabled"
-msgstr "Esta opção controla se o trackback está ou não habilitado para este blog."
+msgstr "Esta opÃ§Ã£o controla se o trackback estÃ¡ ou nÃ£o habilitado para este blog."
+
+#. Default: "Archive URL prefix"
+#: ./interfaces/weblog.py:127
+msgid "label_archive_url_prefix"
+msgstr ""
 
 #. Default: "Entries Per Page"
 #: ./interfaces/weblog.py:109
 msgid "label_entries_per_page"
-msgstr "Entradas por página"
+msgstr "Entradas por pÃ¡gina"
 
 #. Default: "Group by dates"
 #: ./interfaces/weblog.py:103
@@ -79,7 +85,7 @@ msgstr "Exibe apenas os breve descritivos"
 #. Default: "Show Topic Images In Weblog View?"
 #: ./interfaces/weblog.py:115
 msgid "label_show_topic_images_in_weblog_view"
-msgstr "Exibir imagens de tópicos"
+msgstr "Exibir imagens de tÃ³picos"
 
 #. Default: "Enable the receiving of trackback pings?"
 #: ./interfaces/weblog.py:121

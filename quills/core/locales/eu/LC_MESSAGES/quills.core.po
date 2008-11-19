@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Quills 1.5\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"POT-Creation-Date: 2008-11-18 13:10+0000\n"
 "PO-Revision-Date: 2008-10-02 17:21+0100\n"
 "Last-Translator: Mikel Larreategi <mlarreategi@codesyntax.com>\n"
 "Language-Team: \n"
@@ -17,21 +17,22 @@ msgstr ""
 "Preferred-Encodings: latin1 utf-8\n"
 "Domain: quills.core\n"
 
-#: ./interfaces/weblog.py:127
-msgid "Archive format"
-msgstr "Artxiboaren formatua"
-
 #: ./browser/weblogconfig.py:117
 msgid "Configuration saved."
 msgstr "Konfigurazioa gordeta"
 
-#: ./interfaces/weblog.py:136
+#: ./interfaces/weblog.py:135
 msgid "If selected, the item creator and modification date will be shown."
 msgstr "Aukeratuz gero, elementuaren sortzailea eta aldatze data erakutsiko dira"
 
-#: ./interfaces/weblog.py:135
+#: ./interfaces/weblog.py:134
 msgid "Show 'About' info"
 msgstr "Honi buruzko informazioa erakutsi"
+
+#. Default: "Allows for (optionally) injecting a segment into archive URLs after the weblog segment. E.g. to have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."
+#: ./interfaces/weblog.py:128
+msgid "help_archive_url_prefix"
+msgstr ""
 
 #. Default: "Select the number of weblog entries you would like to display on the front page and any other batched pages."
 #: ./interfaces/weblog.py:110
@@ -57,6 +58,11 @@ msgstr "Gaiei dagozkien irudiak agertuko diren ala ez kontrolatzen du honek."
 #: ./interfaces/weblog.py:122
 msgid "help_trackback_enabled"
 msgstr "Trackbackak gaituta dauden ala ez kontrolatzen da hemendik"
+
+#. Default: "Archive URL prefix"
+#: ./interfaces/weblog.py:127
+msgid "label_archive_url_prefix"
+msgstr ""
 
 #. Default: "Entries Per Page"
 #: ./interfaces/weblog.py:109
