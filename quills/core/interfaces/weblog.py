@@ -18,6 +18,14 @@ class IReadWeblog(IWeblogArchive,
     """
     """
 
+    def getId():
+        """Return the id of the weblog.
+        """
+
+    def getTitle():
+        """Return the title of the weblog.
+        """
+
     def hasEntry(id):
         """Return True if this IReadWeblog holds an entry with an id of `id',
         and False otherwise.

@@ -9,6 +9,10 @@ class IReadWeblogEntry(IBaseContent):
     """A weblog entry.
     """
 
+    def getId():
+        """Return the id of the entry.
+        """
+
     def getTitle():
         """Return the title of the entry.
         """
