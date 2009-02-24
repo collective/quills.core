@@ -32,10 +32,6 @@ class IBaseView(IBaseContent):
         """Check if discussion is allowed on obj, but in a way that can handle
         obj being a catalog brain.
         """
-        dtool = getToolByName(self.context, 'portal_discussion')
-        if isinstance(obj, AbstractCatalogBrain):
-            obj = obj.getObject()
-        return dtool.isDiscussionAllowedFor(obj)
 
     def getCommentCountFor(obj):
         """Check how many discussion comments there are on obj, but in a way

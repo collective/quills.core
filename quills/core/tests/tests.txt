@@ -14,13 +14,13 @@ correct interface.
 
 There shouldn't be any published entries in this weblog yet.
 
-  >>> weblog.getEntries()
-  []
+  >>> len(weblog.getEntries())
+  0
 
 There aren't any drafts either.
 
-  >>> weblog.getDrafts()
-  []
+  >>> len(weblog.getDrafts())
+  0
 
 Now we'll add a weblog entry.
 
@@ -118,8 +118,8 @@ We can get a topic by id from the weblog, and that topic will know about the
 entries associated with it, but only when they are published.
 
   >>> aTopic = weblog.getTopicById('aTopic')
-  >>> aTopic.getEntries()
-  []
+  >>> len(aTopic.getEntries())
+  0
   >>> entry1.publish()
   >>> aTopic_entries = aTopic.getEntries()
   >>> len(aTopic_entries)
@@ -133,8 +133,8 @@ We get an empty topic if we ask for one that doesn't really 'exist' yet.
   >>> non_existant = weblog.getTopicById('wowowowow')
   >>> ITopic.providedBy(non_existant)
   True
-  >>> non_existant.getEntries()
-  []
+  >>> len(non_existant.getEntries())
+  0
 
 There are also author topics, that act like topics for individual authors.
 
