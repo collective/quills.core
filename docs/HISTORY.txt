@@ -1,9 +1,7 @@
-Changelog for quills.core
-
-    (name of developer listed in brackets)
+Changelog
+=========
 
 quills.core - 0.1 Unreleased
 
-    - Initial package structure.
-      [zopeskel]
+- Initial package structure.coll [zopeskel]
 

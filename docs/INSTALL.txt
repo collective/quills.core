@@ -1,4 +1,9 @@
-quills.core Installation
-=======================
+Installation
+============
 
- this package is part of the Quills product and is automatically included when Quills is installed.
+This package is part of the Quills product and is automatically included
+when Quills is installed. Have a look at `Products.Quills`_ or 
+`Products.QuillsEnabled`_.
+
+.. _Products.Quills: http://pypi.python.org/pypi/Products.Quills/
+.. _Products.QuillsEnabled: http://pypi.python.org/pypi/Products.QuillsEnabled/

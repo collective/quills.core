@@ -1,24 +1,23 @@
 from setuptools import setup, find_packages
+import os
 
-version = '1.7'
+version = '1.7.0'
 
 setup(name='quills.core',
       version=version,
       description="Core weblog interfaces and views for Quills.",
-      long_description="""\
-""",
+      long_description=open("README.txt").read() + "\n" +
+                       open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
-        "Framework :: Zope2",
-        "Framework :: Zope3",
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
-      keywords='Weblog Plone',
-      author='Tim Hicks',
-      author_email='tim@sitefusion.co.uk',
-      url='http://svn.plone.org/svn/collective/quills.core/',
+      keywords='plone blogging',
+      author='Quills Team',
+      author_email='plone-quills@googlegroups.com',
+      url='http://plone.org/products/quills',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['quills'],
