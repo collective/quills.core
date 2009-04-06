@@ -1,8 +1,8 @@
 Changelog
 =========
 
-quills.core - 0.1 Unreleased
-----------------------------
+0.1 Unreleased
+--------------
 
 - Initial package structure.coll [zopeskel]
 
