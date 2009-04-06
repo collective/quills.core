@@ -9,7 +9,7 @@ Links
 =====
 
 Product Homepage
-    Visit `http://plone.org/products/quills`__.
+    Visit `http://plone.org/products/quills`__ to learn more about Quills.
 
     __ http://plone.org/products/quills
 
@@ -26,3 +26,11 @@ Issue Tracker
 
     __ http://plone.org/products/quills/issues
 
+
+Code Repository
+    You can find the source code in the Plone Collective Repository at
+    `http://svn.plone.org/svn/collective/quills.core/`__.
+
+    __ http://svn.plone.org/svn/collective/quills.core/
+
+     
