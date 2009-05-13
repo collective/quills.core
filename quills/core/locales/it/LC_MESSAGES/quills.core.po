@@ -1,11 +1,11 @@
 # Quills Italian Translation
-# Enzo Cesanelli <enzo at noiza dot com>, 2006.
+# Enzo Cesanelli <enzo at noiza dot com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: 1.5rc2\n"
 "POT-Creation-Date: 2008-11-18 13:10+0000\n"
-"PO-Revision-Date: 2006-08-18 19:00+0200\n"
-"Last-Translator: Enzo Cesanelli <enzo at noiza dot com>\n"
+"PO-Revision-Date: 2008-11-25 19:09+0100\n"
+"Last-Translator: Enzo Cesanelli <enzo@noiza.com>\n"
 "Language-Team: Enzo Cesanelli <enzo at noiza dot com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -18,73 +18,73 @@ msgstr ""
 
 #: ./browser/weblogconfig.py:117
 msgid "Configuration saved."
-msgstr ""
+msgstr "Impostazioni registrate."
 
 #: ./interfaces/weblog.py:135
 msgid "If selected, the item creator and modification date will be shown."
-msgstr ""
+msgstr "Se selezionato, mostra l'autore e la data di modifica del post."
 
 #: ./interfaces/weblog.py:134
 msgid "Show 'About' info"
-msgstr ""
+msgstr "Mostra le informazioni del post"
 
 #. Default: "Allows for (optionally) injecting a segment into archive URLs after the weblog segment. E.g. to have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."
 #: ./interfaces/weblog.py:128
 msgid "help_archive_url_prefix"
-msgstr ""
+msgstr "Permette di inserire un segmento nell'URL dell'archivio dopo la parte relativa al nome del blog. Ad es. per ottenere un URL del tipo [blog]/archivio/2007/07/21/id_post, inserisci 'archivio' nel campo sottostante."
 
 #. Default: "Select the number of weblog entries you would like to display on the front page and any other batched pages."
 #: ./interfaces/weblog.py:110
 msgid "help_entries_per_page"
-msgstr ""
+msgstr "Indica il numero di post da mostrare nella pagina principale del blog."
 
 #. Default: "When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother."
 #: ./interfaces/weblog.py:104
 msgid "help_group_by_dates"
-msgstr ""
+msgstr "Se selezionato, raggruppa i post sotto l'indicazione della data di pubblicazione. Altrimenti, i post sono presentati uno sotto l'altro."
 
 #. Default: "When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed."
 #: ./interfaces/weblog.py:98
 msgid "help_only_excerpt_in_weblog_view"
-msgstr ""
+msgstr "Se selezionato, mostra solo il titolo e l'introduzione del post. Se il post non ha introduzione, sarà mostrato solo il titolo."
 
 #. Default: "This controls the display of topic images in the weblog view."
 #: ./interfaces/weblog.py:116
 msgid "help_show_topic_images_in_weblog_view"
-msgstr ""
+msgstr "Controlla la visibilità delle immagini associate alle parole chiave nella vista blog."
 
 #. Default: "This controls whether trackback are enabled in the weblog"
 #: ./interfaces/weblog.py:122
 msgid "help_trackback_enabled"
-msgstr ""
+msgstr "Controlla se i trackback del blog sono attivi."
 
 #. Default: "Archive URL prefix"
 #: ./interfaces/weblog.py:127
 msgid "label_archive_url_prefix"
-msgstr ""
+msgstr "Prefisso URL archivio"
 
 #. Default: "Entries Per Page"
 #: ./interfaces/weblog.py:109
 msgid "label_entries_per_page"
-msgstr ""
+msgstr "Post per pagina"
 
 #. Default: "Group by dates"
 #: ./interfaces/weblog.py:103
 msgid "label_group_by_dates"
-msgstr ""
+msgstr "Raggruppa per data"
 
 #. Default: "Only excerpt in weblog view."
 #: ./interfaces/weblog.py:97
 msgid "label_only_excerpt_in_weblog_view"
-msgstr ""
+msgstr "Solo Introduzione"
 
 #. Default: "Show Topic Images In Weblog View?"
 #: ./interfaces/weblog.py:115
 msgid "label_show_topic_images_in_weblog_view"
-msgstr ""
+msgstr "Mostrare immagini delle parole chiave?"
 
 #. Default: "Enable the receiving of trackback pings?"
 #: ./interfaces/weblog.py:121
 msgid "label_trackback_enabled"
-msgstr ""
+msgstr "Attivare la ricezione dei trackback?"
 
