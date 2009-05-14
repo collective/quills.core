@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.7.0b3'
+version = '1.7.0c1'
 
 setup(name='quills.core',
       version=version,

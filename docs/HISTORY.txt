@@ -1,8 +1,5 @@
 Changelog
 =========
 
-0.1 Unreleased
---------------
-
-- Initial package structure.coll [zopeskel]
+See package Products.Quills/Products.QuillsEnabled for a changelog.
 
