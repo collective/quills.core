@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Quills 1.5\n"
 "POT-Creation-Date: 2008-11-18 13:10+0000\n"
-"PO-Revision-Date: 2006-06-29 12:25+0000\n"
-"Last-Translator: Sune Toft <sune@headnet.dk>\n"
+"PO-Revision-Date: 2009-06-03 17:35+0200\n"
+"Last-Translator: Thomas Clement Mogensen <thomas@headnet.dk>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=iso-8859-1\n"
@@ -19,73 +19,73 @@ msgstr ""
 
 #: ./browser/weblogconfig.py:117
 msgid "Configuration saved."
-msgstr ""
+msgstr "Indstillinger gemt"
 
 #: ./interfaces/weblog.py:135
 msgid "If selected, the item creator and modification date will be shown."
-msgstr ""
+msgstr "Hvis valgt vises indlægs forfatter og ændringsdato."
 
 #: ./interfaces/weblog.py:134
 msgid "Show 'About' info"
-msgstr ""
+msgstr "Vis 'Om' information"
 
 #. Default: "Allows for (optionally) injecting a segment into archive URLs after the weblog segment. E.g. to have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."
 #: ./interfaces/weblog.py:128
 msgid "help_archive_url_prefix"
-msgstr ""
+msgstr "Giver mulighed for at indskyde en sti i webloggen's arkiv-URL'er. Skriv f.eks. 'arkiv' for at få URL'er på formen [weblog]/arkiv/2007/07/21. Denne mulighed er helt valgfri."
 
 #. Default: "Select the number of weblog entries you would like to display on the front page and any other batched pages."
 #: ./interfaces/weblog.py:110
 msgid "help_entries_per_page"
-msgstr ""
+msgstr "Vælg det antal weblog indgange du ønsker på forsiden og andre batchede sider."
 
 #. Default: "When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother."
 #: ./interfaces/weblog.py:104
 msgid "help_group_by_dates"
-msgstr ""
+msgstr "Hvis valgt vil de enkelte indlæg blive grupperet efter dato - med datoen som overskrift. Ellers vises de blot i en liste."
 
 #. Default: "When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed."
 #: ./interfaces/weblog.py:98
 msgid "help_only_excerpt_in_weblog_view"
-msgstr ""
+msgstr "Hvis valgt vises kun titel og uddrag i webloggens hovedvisning. Hvis et indlæg ikke har noget uddrag vises blot titlen."
 
 #. Default: "This controls the display of topic images in the weblog view."
 #: ./interfaces/weblog.py:116
 msgid "help_show_topic_images_in_weblog_view"
-msgstr ""
+msgstr "Vælges hvis emne-billeder skal vises i vebloggens visning."
 
 #. Default: "This controls whether trackback are enabled in the weblog"
 #: ./interfaces/weblog.py:122
 msgid "help_trackback_enabled"
-msgstr ""
+msgstr "Vælges hvis trackback skal være tilgængelig i webloggen"
 
 #. Default: "Archive URL prefix"
 #: ./interfaces/weblog.py:127
 msgid "label_archive_url_prefix"
-msgstr ""
+msgstr "Arkiv URL prefix"
 
 #. Default: "Entries Per Page"
 #: ./interfaces/weblog.py:109
 msgid "label_entries_per_page"
-msgstr ""
+msgstr "Indlæg per side"
 
 #. Default: "Group by dates"
 #: ./interfaces/weblog.py:103
 msgid "label_group_by_dates"
-msgstr ""
+msgstr "Grupper efter dato"
 
 #. Default: "Only excerpt in weblog view."
 #: ./interfaces/weblog.py:97
 msgid "label_only_excerpt_in_weblog_view"
-msgstr ""
+msgstr "Kun uddrag i weblogvisning"
 
 #. Default: "Show Topic Images In Weblog View?"
 #: ./interfaces/weblog.py:115
 msgid "label_show_topic_images_in_weblog_view"
-msgstr ""
+msgstr "Vis emne-billeder i weblogvisning?"
 
 #. Default: "Enable the receiving of trackback pings?"
 #: ./interfaces/weblog.py:121
 msgid "label_trackback_enabled"
-msgstr ""
+msgstr "Slå modtagelse af trackback pings til?"
 
