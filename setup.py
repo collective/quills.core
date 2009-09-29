@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.7.0c1'
+version = '1.7.0'
 
 setup(name='quills.core',
       version=version,
@@ -10,7 +10,7 @@ setup(name='quills.core',
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
-        "Development Status :: 4 - Beta",
+        "Development Status :: 5 - Production/Stable",
         "Framework :: Plone",
         "License :: OSI Approved :: GNU General Public License (GPL)",
         "Programming Language :: Python",
