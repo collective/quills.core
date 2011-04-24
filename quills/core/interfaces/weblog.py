@@ -98,50 +98,65 @@ class IWeblog(IReadWeblog, IWriteWeblog, IEditWeblog):
 
 
 class IWeblogConfiguration(Interface):
-    """
-    """
-
+    """ """
     only_excerpt_in_weblog_view = schema.Bool(
-        title=_(u'label_only_excerpt_in_weblog_view', default=u'Only excerpt in weblog view.'),
-        description=_(u'help_only_excerpt_in_weblog_view', default=u'When enabled, show only the title and excerpt in the main weblog view.  If an entry has no excerpt, only its title will be displayed.'),
+        title = _(u'label_only_excerpt_in_weblog_view', 
+                default=u'Only excerpt in weblog view.'),
+        description = _(u'help_only_excerpt_in_weblog_view', 
+                default=u"When enabled, show only the title and "
+                "excerpt in the main weblog view. If an entry has "
+                "no excerpt, only its title will be displayed."),
         default=False,
         )
-
     group_by_dates = schema.Bool(
         title=_(u'label_group_by_dates', default=u'Group by dates'),
-        description=_(u'help_group_by_dates', default=u'When enabled, entries will be grouped under a header showing the date. Otherwise, the entries will be just be shown underneath eachother.'),
+        description=_(u'help_group_by_dates', 
+                default=u'When enabled, entries will be grouped under '
+                u'a header showing the date. Otherwise, the entries will '
+                u'be just be shown underneath eachother.'),
         default=True,
         )
-
-    entries_per_page = schema.Int(
-        title=_(u'label_entries_per_page', default=u'Entries Per Page'),
-        description=_(u'help_entries_per_page', default=u'Select the number of weblog entries you would like to display on the front page and any other batched pages.'),
-        default=20,
-        )
-
     topic_images_in_weblog_view = schema.Bool(
-        title=_(u'label_show_topic_images_in_weblog_view', default=u'Show Topic Images In Weblog View?'),
-        description=_(u'help_show_topic_images_in_weblog_view', default=u'This controls the display of topic images in the weblog view.'),
+        title=_(u'label_show_topic_images_in_weblog_view', 
+                default=u'Show Topic Images In Weblog View?'),
+        description=_(u'help_show_topic_images_in_weblog_view', 
+                default=u'This controls the display of topic images in '
+                u'the weblog view.'),
         default=True,
         )
-
     trackback_enabled = schema.Bool(
-        title=_(u'label_trackback_enabled', default=u'Enable the receiving of trackback pings?'),
-        description=_(u'help_trackback_enabled', default=u'This controls whether trackback are enabled in the weblog'),
+        title=_(u'label_trackback_enabled', 
+                default=u'Enable the receiving of trackback pings?'),
+        description=_(u'help_trackback_enabled', 
+                default=u'This controls whether trackback are enabled in '
+                u'the weblog'),
         default=False,
         )
-
+    show_about = schema.Bool(
+        title=_(u"Show 'About' info"),
+        description=_(
+                u"If selected, the item creator and modification date will "
+                u"be shown."),
+        default=True,
+        )
     archive_format = schema.TextLine(
-        title=_(u'label_archive_url_prefix', default=u'Archive URL prefix'),
-        description=_(u'help_archive_url_prefix', default="Allows for (optionally) injecting a segment into archive URLs after the weblog segment. E.g. to have URLs like [weblog]/archive/2007/07/21/entry_id, enter 'archive' here."),
+        title=_(u'label_archive_url_prefix', 
+                default=u'Archive URL prefix'),
+        description=_(u'help_archive_url_prefix', 
+                default=u"Allows for (optionally) injecting a segment into "
+                u"archive URLs after the weblog segment. E.g. to have URLs "
+                u"like [weblog]/archive/2007/07/21/entry_id, enter 'archive' "
+                u"here."),
         default=u'',
         required=False,
         )
-    
-    show_about = schema.Bool(
-        title=_(u"Show 'About' info"),
-        description=_(u"If selected, the item creator and modification date will be shown."),
-        default=True,
+    entries_per_page = schema.Int(
+        title=_(u'label_entries_per_page', default=u'Entries Per Page'),
+        description=_(u'help_entries_per_page', 
+                    default=u'Select the number of weblog entries you would '
+                    u'like to display on the front page and any other batched '
+                    u'pages.'),
+        default=20,
         )
 
 
